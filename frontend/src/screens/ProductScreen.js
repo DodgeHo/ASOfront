@@ -28,7 +28,7 @@ function ProductScreen(props) {
     return () => {
       //
     };
-  }, [productSaveSuccess]);
+  }, [dispatch, productSaveSuccess, props.match.params.id]);
   const submitHandler = (e) => {
     e.preventDefault();
     // dispatch actions

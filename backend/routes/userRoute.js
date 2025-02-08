@@ -1,6 +1,6 @@
 import express from 'express';
-import User from '../models/userModel';
-import { getToken, isAuth } from '../util';
+import User from '../models/userModel.js';
+import { getToken, isAuth } from '../util.js';
 
 const router = express.Router();
 
@@ -65,9 +65,9 @@ router.post('/register', async (req, res) => {
 router.get('/createadmin', async (req, res) => {
   try {
     const user = new User({
-      name: 'Basir',
-      email: 'admin@example.com',
-      password: '1234',
+      name: 'admin',
+      email: 'admin@admin.com',
+      password: 'admin',
       isAdmin: true,
     });
     const newUser = await user.save();

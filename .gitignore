@@ -1,9 +1,12 @@
 # build output
 dist/
 .astro/
+build/
+frontend/build/
 
 # dependencies
 node_modules/
+frontend/node_modules/
 
 # openapi client
 .client/
@@ -33,3 +36,6 @@ pnpm-debug.log*
 # playwright
 playwright-report/
 test-results/
+update-imports.cjstest-results/
+
+update-imports.cjs

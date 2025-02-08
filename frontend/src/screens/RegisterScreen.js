@@ -21,7 +21,7 @@ function RegisterScreen(props) {
     return () => {
       //
     };
-  }, [userInfo]);
+  }, [props.history, redirect, userInfo]);
 
   const submitHandler = (e) => {
     e.preventDefault();

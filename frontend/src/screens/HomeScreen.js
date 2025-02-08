@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import axios from 'axios'; // 另一种导入方式
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import Rating from '../components/Rating';
@@ -8,7 +8,7 @@ import Rating from '../components/Rating';
 function HomeScreen(props) {
   const [searchKeyword, setSearchKeyword] = useState('');
   const [sortOrder, setSortOrder] = useState('');
-  const category = props.match.params.id ? props.match.params.id : '';
+  const category = props.match && props.match.params.id ? props.match.params.id : '';
   const productList = useSelector((state) => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ function HomeScreen(props) {
     return () => {
       //
     };
-  }, [category]);
+  }, [dispatch, category]);
 
   const submitHandler = (e) => {
     e.preventDefault();

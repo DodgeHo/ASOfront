@@ -36,7 +36,7 @@ function ProfileScreen(props) {
     return () => {
 
     };
-  }, [userInfo])
+  }, [dispatch, userInfo])
 
   return <div className="profile">
     <div className="profile-info">

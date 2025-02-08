@@ -18,7 +18,7 @@ function CartScreen(props) {
     if (productId) {
       dispatch(addToCart(productId, qty));
     }
-  }, []);
+  }, [dispatch, productId, qty]);
 
   const checkoutHandler = () => {
     props.history.push("/signin?redirect=shipping");

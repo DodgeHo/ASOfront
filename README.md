@@ -36,27 +36,29 @@ $ cd node-react-ecommerce
 
 Download it from here: https://docs.mongodb.com/manual/administration/install-community/
 
-### 3. Run Backend
 
-```
-$ npm install
-$ npm start
-```
-
-### 4. Run Frontend
+### 3. Run Frontend
 
 ```
 # open new terminal
 $ cd frontend
-$ npm install
-$ npm start
+$ pnpm install
+$ pnpm run build
+$ pnpm start
+```
+### 4. Run Backend
+
+```
+$ pnpm install
+$ pnpm start
 ```
 
 ### 5. Create Admin User
 
 - Run this on chrome: http://localhost:5000/api/users/createadmin
 - It returns admin email and password
-
+- admin
+- admin@admin.com password:admin
 ### 6. Login
 
 - Run http://localhost:3000/signin
@@ -219,7 +221,7 @@ This part shows list of reviews by users for each products. also it provides a f
 
 Admin shoud be able to uploads photos from their computer. This section is about uploading images on local server ans aws s3 cloud server.
 
-1. npm install multer
+1. pnpm install multer
 2. routes/uploadRoute.js
 3. import express and multer
 4. create disk storage with Date.now().jpg as filename
@@ -248,7 +250,7 @@ This section is about uploading images amazon aws s3 cloud server.
 5. past it into .env as accessKeyId and secretAccessKey
 6. move dotenv to config.js
 7. add accessKeyId and secretAccessKey to config.js
-8. npm install aws-sdk multer-s3
+8. pnpm install aws-sdk multer-s3
 9. routes/uploadRoute.js
 10. set aws.config.update to config values
 11. create s3 from new aws.S3()

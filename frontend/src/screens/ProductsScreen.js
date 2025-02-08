@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import axios from 'axios';
+import axios from 'axios'; // 另一种导入方式
 import {
   saveProduct,
   listProducts,
@@ -44,7 +44,7 @@ function ProductsScreen(props) {
     return () => {
       //
     };
-  }, [successSave, successDelete]);
+  }, [successSave, successDelete, dispatch]);
 
   const openModal = (product) => {
     setModalVisible(true);

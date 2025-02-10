@@ -37,5 +37,10 @@ pnpm-debug.log*
 playwright-report/
 test-results/
 update-imports.cjstest-results/
-
 update-imports.cjs
+
+# Next.js build output
+.next/
+
+# VSCode settings
+.vscode/

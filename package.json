@@ -1,50 +1,38 @@
 {
-  "name": "amazona",
-  "version": "1.0.0",
-  "description": "Demo : https://amazonaapp.herokuapp.com/",
-  "main": "index.js",
-  "type": "module",
+  "name": "open-pro-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.744.0",
-    "body-parser": "^1.20.3",
-    "dotenv": "^16.4.7",
-    "eslint-plugin-react": "^7.37.4",
-    "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.10.0",
-    "multer": "1.4.5-lts.1",
-    "multer-s3": "^3.0.1"
+    "@headlessui/react": "^2.2.0",
+    "@headlessui/tailwindcss": "^0.2.2",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "15.1.6",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^22.13.1",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "aos": "3.0.0-beta.6",
+    "date-fns": "^4.1.0",
+    "next": "15.1.6",
+    "next-mdx-remote": "^5.0.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "rehype-pretty-code": "^0.14.0",
+    "typescript": "^5.7.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.26.4",
-    "@babel/core": "^7.26.7",
-    "@babel/node": "^7.26.0",
-    "@babel/preset-env": "^7.26.7",
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "mongodb-memory-server": "^10.1.3",
-    "nodemon": "^3.1.9"
-  },
-  "scripts": {
-    "start": "nodemon --watch backend --exec babel-node backend/server.js",
-    "build": "rm -rf dist && babel backend -d dist  && cd frontend && npm install && npm run build",
-    "heroku-postbuild-x": "npm run build && cd frontend && npm install && npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/basir/amazona.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/basir/amazona/issues"
-  },
-  "homepage": "https://github.com/basir/amazona#readme",
-  "engines": {
-    "node": "23.6.1",
-    "pnpm": "9.15.4"
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/postcss": "^4.0.5",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/aos": "^3.0.7",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.5"
   }
 }

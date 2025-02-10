@@ -1,15 +1,15 @@
 import "./css/style.css";
 
-import { Inter } from "next/font/google";
+//import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 import Header from "@/components/ui/header";
 
-const inter = Inter({
+/* const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-});
+}); */
 
 const nacelle = localFont({
   src: [
@@ -37,6 +37,8 @@ const nacelle = localFont({
   variable: "--font-nacelle",
   display: "swap",
 });
+
+const inter = nacelle
 
 export const metadata = {
   title: "Create Next App",

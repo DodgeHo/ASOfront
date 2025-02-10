@@ -41,6 +41,8 @@ update-imports.cjs
 
 # Next.js build output
 .next/
+.out/
+out/
 
 # VSCode settings
 .vscode/

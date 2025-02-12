@@ -7,47 +7,62 @@ export default function HeroHome() {
       <div className="container">
         <div className="hero-content">
           <div className="section-header">
-            <div data-aos="fade-up" data-aos-delay={600}>
-              <a className="btn hero-upper-btn" href="#0"
-                style={{ background: homePageConfig.heroUpperButtonColor }}>
+            <div className="text-container">
+              <div className="btn-container" data-aos="fade-up" 
+                style={{ 
+                  marginTop: homePageConfig.heroUpperButtonMarginTop,
+                  marginBottom: homePageConfig.heroUpperButtonMarginBottom
+                }}>
+                <a className="btn hero-upper-btn" 
+                  style={{ 
+                  fontSize: homePageConfig.heroUpperButtonFontSize,
+                  fontWeight: homePageConfig.heroUpperButtonFontWeight,
+                  }}>
                   <span className="relative inline-flex items-center">
-                    {homePageConfig.heroUpperButtonText}</span>
-                
-              </a>
+                  {homePageConfig.heroUpperButtonText}
+                  </span>
+                </a>
+              </div>
             </div>
-            <div className="hero-title" data-aos="fade-up"
+            <div className="hero-title" data-aos="fade-up" data-aos-delay={200} 
               style={{
-                background: homePageConfig.heroTitleColor,
                 WebkitBackgroundClip: 'text',
-                color: 'transparent',
                 fontSize: homePageConfig.heroTitleFontSize,
+                fontWeight: homePageConfig.heroTitleFontWeight,
+                marginBottom: homePageConfig.heroTitleMarginBottom,
               }} >
               {homePageConfig.heroTitle}
             </div>
             <div className="text-container">
-              <p className="hero-text" data-aos="fade-up" data-aos-delay={200}
+              <p className="hero-text" data-aos="fade-up" data-aos-delay={400}
                 style={{
-                  background: homePageConfig.heroSecondTextColor,
-                  WebkitBackgroundClip: 'text',
-                  color: 'transparent',
+                  color: 'var(--global-theme-color-light-cyan)',
                   fontSize: homePageConfig.heroSecondFontSize,
+                  marginBottom: homePageConfig.heroSecondTextMarginBottom,
+                  fontWeight: homePageConfig.heroSecondTextFontWeight, 
+                  lineHeight: homePageConfig.heroSecondTextLineHeight,
                 }}
               >
                 {homePageConfig.heroSecondText}
               </p>
-              <p className="hero-text" data-aos="fade-up" data-aos-delay={400}
+              <p className="hero-text" data-aos="fade-up" data-aos-delay={600}
                 style={{
                   color: homePageConfig.heroThirdTextColor,
                   fontSize: homePageConfig.heroThirdFontSize,
+                  marginBottom: homePageConfig.heroThirdTextMarginBottom,
+                  fontWeight: homePageConfig.heroThirdTextFontWeight,
+                  lineHeight: homePageConfig.heroThirdTextLineHeight,
                 }}
               >
                 {homePageConfig.heroThirdText}
               </p>
-              <div className="btn-container">
-                <a className="btn hero-lower-btn" href="#0"
-                  style={{ background: homePageConfig.heroLowerButtonColor }}
-                >
-                  <span className="relative inline-flex items-center">
+              <div className="btn-container" data-aos="fade-up" data-aos-delay={1000}>
+                <a className="btn hero-lower-btn" href="#0" >
+                  <span className="relative inline-flex items-center"
+                    style={{ 
+                      fontSize: homePageConfig.heroLowerButtonFontSize,
+                      fontWeight: homePageConfig.heroLowerButtonFontWeight,  
+                    }}>
                     {homePageConfig.heroLowerButtonText}
                   </span>
                 </a>

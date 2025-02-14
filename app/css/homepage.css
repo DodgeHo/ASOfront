@@ -1,0 +1,83 @@
+.container {
+  max-width: 6xl;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero-content {
+  padding: 3rem 0;
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.hero-title {
+  background: var(--color-gradient-green-to-cyan);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  font-family: sans-serif;
+  animation: gradient 6s linear infinite;
+}
+
+.text-container {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.hero-text {
+  color: rgb(255, 255, 255);
+  white-space: pre-line;
+}
+
+.btn-container {
+  max-width: 10rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.hero-lower-btn {
+  width: 100%;
+  background: var(--color-gradient-green-to-blue);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.16);
+  transition: background-size 0.3s;
+  border-radius: 12px;
+  padding-block: 8px;
+}
+
+.hero-lower-btn:hover {
+  background-size: 100% 150%;
+}
+
+.hero-upper-btn {
+  --border-width: 2px;
+  --border-radius: 40px;
+  --border-color: var(--color-gradient-green-to-blue);
+  padding-block: 4px;
+  max-width: 10rem;
+}
+
+.hero-upper-btn:after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background: var(--border-color);
+
+  mask-image: var(--mask-bg), var(--mask-bg);
+  mask-clip: var(--mask-clip);
+  mask-composite: exclude;
+  mask-image: var(--mask-bg), var(--mask-bg);
+  -webkit-mask-image: var(--mask-bg), var(--mask-bg);
+  -webkit-mask-clip: var(--mask-clip);
+  -webkit-mask-composite: destination-out;
+}

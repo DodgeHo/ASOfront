@@ -10,6 +10,7 @@ import Features from "@/components/features";
 import Pricing from "@/components/pricing-home";
 import SplitCarousel from "@/components/split-carousel";
 import Cta from "@/components/cta";
+import "../css/homepage.css"
 
 export default function Home() {
   return (

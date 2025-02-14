@@ -5,12 +5,13 @@ interface LiLinkProps {
   href: string;
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
-export const LiLink: React.FC<LiLinkProps> = ({ href, children, className = "nav-link" }) => {
+export const LiLink: React.FC<LiLinkProps> = ({ href, children, className = "nav-link", onClick }) => {
   return (
     <li>
-      <Link href={href} className={className}>
+      <Link href={href} className={className} onClick={onClick}>
         {children}
       </Link>
     </li>
@@ -22,12 +23,13 @@ interface LiAProps {
   children: React.ReactNode;
   className?: string;
   ariaLabel?: string;
+  onClick?: () => void;
 }
 
-export const LiA: React.FC<LiAProps> = ({ href = "#0", children, className = "text-link", ariaLabel }) => {
+export const LiA: React.FC<LiAProps> = ({ href = "#0", children, className = "text-link", ariaLabel, onClick }) => {
   return (
     <li>
-      <a href={href} className={className} aria-label={ariaLabel}>
+      <a href={href} className={className} aria-label={ariaLabel} onClick={onClick}>
         {children}
       </a>
     </li>

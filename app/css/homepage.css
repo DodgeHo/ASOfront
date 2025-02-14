@@ -58,6 +58,10 @@
   --border-width: 2px;
   --border-radius: 40px;
   --border-color: var(--color-gradient-green-to-blue);
+  --left-position: 15%;
+  --top-position: 0;
+  --width-size: 70%;
+  --height-size: 100%;
   padding-block: 4px;
   max-width: 10rem;
 }
@@ -65,10 +69,10 @@
 .hero-upper-btn:after {
   content: "";
   position: absolute;
-  left: 15%;
-  top: 0;
-  width: 70%;
-  height: 100%;
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
   padding: var(--border-width);
   border-radius: var(--border-radius);
   background: var(--border-color);
@@ -80,4 +84,15 @@
   -webkit-mask-image: var(--mask-bg), var(--mask-bg);
   -webkit-mask-clip: var(--mask-clip);
   -webkit-mask-composite: destination-out;
+}
+
+.hero-upper-btn:hover {
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background: var(--border-color);
+  background: var(--color-gradient-green-to-blue);
 }

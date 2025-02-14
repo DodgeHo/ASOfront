@@ -13,7 +13,7 @@ export default function HeroHome() {
                   marginTop: homePageConfig.heroUpperButtonMarginTop,
                   marginBottom: homePageConfig.heroUpperButtonMarginBottom
                 }}>
-                <a className="btn hero-upper-btn" 
+                <a className="btn hero-upper-btn" href="#0"
                   style={{ 
                   fontSize: homePageConfig.heroUpperButtonFontSize,
                   fontWeight: homePageConfig.heroUpperButtonFontWeight,

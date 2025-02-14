@@ -1,10 +1,12 @@
+import SocialLink from "./SocialLink";
 import Logo from "./logo";
 import Image from "next/image";
 import TwitterIcon from "@/public/images/twitter.svg";
-import MediumIcon from "@/public/images/OO.png";
-import GithubIcon from "@/public/images/github.svg";
+import DiscordIcon from "@/public/images/discord.svg";
+import TelegramIcon from "@/public/images/telegram.svg";
 import FooterIllustration from "@/public/images/footer-illustration.svg";
 import { LiLink } from "./LinkComponents";
+import globalConfig from "@/configs/globalConfig";
 
 export default function Footer() {
   return (
@@ -23,54 +25,23 @@ export default function Footer() {
             alt="Footer illustration"
           />
         </div>
-        <ul className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-4 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(4,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
-          <LiLink href="/product">Product</LiLink>
-          <LiLink href="/about">Company</LiLink>
-          <LiLink href="/blog">Resources</LiLink>
-          <LiLink href="/help/frequently-asked-questions">
-            Content Library
-          </LiLink>
-
+        <ul className="grid grid-cols-2 gap-4 justify-between py-8 sm:grid-rows-[auto_auto] md:grid-cols-7 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-7 lg:grid-rows-1">
+          {globalConfig.menuLinks.map((link) => (
+              <LiLink key={link.href} href={link.href} >
+                {link.label}
+              </LiLink>
+            ))}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:text-left">
-            <div className="mb-3">
               <Logo />
-            </div>
-            <div className="text-sm">
-              <ul className="inline-flex gap-1">
-                <li>
-                  <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
-                    aria-label="Twitter"
-                  >
-                    <Image
-                      className="h-8 w-8"
-                      src={TwitterIcon}
-                      alt="Twitter"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
-                    aria-label="Medium"
-                  >
-                    <Image className="h-8 w-8" src={MediumIcon} alt="Medium" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
-                    aria-label="Github"
-                  >
-                    <Image className="h-8 w-8" src={GithubIcon} alt="Github" />
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
+
+          <div className="text-sm">
+                <ul className="inline-flex gap-4 pl-4">
+                <SocialLink href="#0" ariaLabel="Discord" src={DiscordIcon} />
+                <SocialLink href="#0" ariaLabel="Twitter" src={TwitterIcon} />
+                <SocialLink href="#0" ariaLabel="Telegram" src={TelegramIcon} />
+                </ul>
+            </div>
         </ul>
       </div>
     </footer>

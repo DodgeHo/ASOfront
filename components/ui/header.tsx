@@ -3,42 +3,42 @@ import Logo from "./logo";
 import Dropdown from "@/components/dropdown";
 import MobileMenu from "./mobile-menu";
 import { LiLink } from "./LinkComponents";
+import globalConfig from "@/configs/globalConfig";
 import "../../app/css/header.css";
 
 export default function Header() {
   return (
-    <header className="header-container">
-      <div className="header-inner">
-        <div className="header-content">
-          {/* Site branding */}
-          <div className="flex flex-1 items-center">
-            <Logo />
-          </div>
-
-          {/* Desktop navigation */}
-          <nav className="hidden md:flex md:grow">
-            {/* Desktop menu links */}
-            <ul className="nav-links">
-              <LiLink href="/pricing">Pricing</LiLink>
-              <LiLink href="/about">About Us</LiLink>
-              <LiLink href="/blog">Blog</LiLink>
-              <LiLink href="/help/frequently-asked-questions">Help Centre</LiLink>
-              <Dropdown title="Resources">
-                <LiLink href="/newsletter" className="nav-link-custom">Newsletter</LiLink>
-                <LiLink href="/contact" className="nav-link-custom">Contact Us</LiLink>
-                <LiLink href="/404" className="nav-link-custom">404</LiLink>
-              </Dropdown>
-            </ul>
-          </nav>
-
-          {/* Desktop sign in links */}
+    <header>
+      <div className="header-content">
+        {/* Desktop navigation */}
+        <nav className="hidden md:flex md:grow flex flex-1 items-center">
+          {/* Desktop menu links */}
           <ul className="nav-links">
-            <LiLink href="/signin" className="signin-link">Sign In</LiLink>
-            <LiLink href="/signip" className="register-link">Register</LiLink>
+            <div className=" ">
+              <Logo />
+            </div>
+            {globalConfig.menuLinks.map((link) => (
+              <LiLink 
+                key={link.href} 
+                href={link.href} 
+                className={link.label.startsWith('$') ? 'nav-link-highlight nav-link' : 'nav-link-common nav-link'}
+              >
+                {link.label}
+              </LiLink>
+            ))}
+            {/*
+              <Dropdown title="选择语言">
+                <LiLink href="/English" className="nav-link-custom">English</LiLink>
+                <LiLink href="/Chinese" className="nav-link-custom">Chinese</LiLink>
+                <LiLink href="/Arabic" className="nav-link-custom">Arabic</LiLink>
+              </Dropdown>
+              */}
+            <LiLink href="/signin" className="signin-link">登录</LiLink>
+            <LiLink href="/signip" className="register-link">注册</LiLink>
           </ul>
+        </nav>
 
-          <MobileMenu />
-        </div>
+        <MobileMenu />
       </div>
     </header>
   );

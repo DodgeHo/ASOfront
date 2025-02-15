@@ -96,23 +96,37 @@
 }
 
 :root {
-
+  --color-blue-600: #0B5FFF;
+  --color-light-blue: #29BCFF;
   --color-light-cyan: #CCEDF2;
-  --color-sky-blue: #00B1FC;
   --color-indigo-500: #6366f1;
   --color-indigo-700: #4f46e5;
   --color-indigo-200-65: #818cf8a6;
   --color-indigo-400: #818cf8;
   --color-indigo-500-65: #6366f1a6;
-  --color-blue-500: #3b82f6;
+  --color-blue-500: #3b83f6d6;
+  --color-dark-blue: #4a80dde5;
   --color-gray-700: #4b5563;
   --color-green-500: #B3F37A;
+  --color-mid-gray: #122a4618;
+  --color-dark-navy: #102230; /*background color*/
   --color-gradient-green-to-blue: linear-gradient(to bottom, #05BE9D, #0A77D8);
   --color-gradient-purple-to-blue: linear-gradient(to top, #4c51bf, #5a67d8);
-  --color-gradient-green-to-cyan: linear-gradient(to bottom, var(--color-green-500), #6FDCDE);
-
-  --mask-bg: linear-gradient(red, red);
+  --color-gradient-green-to-cyan: linear-gradient(to bottom, var(--color-green-500), #8AE4C5, #6FDCDE);
+  --color-gradient-blue-to-light-blue: linear-gradient(to bottom, #0B5FFF, #29BCFF);
+  --mask-bg: linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
   --mask-clip: content-box, padding-box;
+  --animate-gradient: gradient 6s linear infinite;
+
+}
+
+.body {
+  background-color: var(--color-dark-navy);
+  font-family: var(--font-inter);
+  font-size: var(--text-base);
+  color: var(--color-gray-200);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .custom-bg {
@@ -129,26 +143,55 @@
   background-size: 100% 150%;
 }
 
+.centered-absolute-bottom {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -10;
+}
 
 
+.animate-gradient-text  {
+  animation: var(--animate-gradient);
+  background: var(--color-gradient-blue-to-light-blue);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nacelle-text {
+  font-family: var(--font-nacelle);
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .nacelle-text {
+    font-size: var(--text-5xl);
+  }
+}
 .text-link {
-  color: rgba(129, 140, 248, 0.65); /* text-indigo-200/65 */
+  color: var(--color-indigo-200-65); 
   transition: color 0.2s;
 }
 
 .text-link:hover {
-  color: var(--color-indigo-500); /* hover:text-indigo-500 */
+  color: var(--color-indigo-500); 
 }
 
 .social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-indigo-500); /* text-indigo-500 */
+  color: var(--color-indigo-500); 
   transition: color 0.2s;
 }
 
 .social-icon:hover {
-  color: rgba(129, 140, 248, 1); /* hover:text-indigo-400 */
+  color: var(--color-indigo-400);
 }
 

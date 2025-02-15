@@ -32,7 +32,7 @@ export default function ModalVideo({
     <div className="relative">
       {/* Secondary illustration */}
       <div
-        className="pointer-events-none absolute bottom-8 left-1/2 -z-10 -ml-28 -translate-x-1/2 translate-y-1/2"
+        className="centered-absolute-bottom -ml-28 -translate-x-1/2 translate-y-1/2"
         aria-hidden="true"
       >
         <Image

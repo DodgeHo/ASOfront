@@ -5,7 +5,7 @@ export default function Clients() {
         <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-            <h2 className="aos-init aos-animate animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <h2 className="aos-init aos-animate animate-gradient-text nacelle-text ">
               Our customers span the globe
             </h2>
           </div>

@@ -14,14 +14,14 @@ export default function HeroPricing() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="text-center">
-            <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-12 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+            <h1 className="animate-gradient-text pb-12 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
               Pick the right plan for your business
             </h1>
           </div>
           <div className="relative">
             {/* Secondary illustration */}
             <div
-              className="pointer-events-none absolute bottom-28 left-1/2 -z-10 -ml-28 -translate-x-1/2 translate-y-1/2"
+              className="centered-absolute-bottom -ml-28 -translate-x-1/2 translate-y-1/2"
               aria-hidden="true"
             >
               <Image

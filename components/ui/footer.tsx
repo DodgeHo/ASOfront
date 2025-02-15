@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         {/* Footer illustration */}
         <div
-          className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -translate-x-1/2"
+          className="centered-absolute-bottom -translate-x-1/2"
           aria-hidden="true"
         >
           <Image

@@ -10,7 +10,7 @@ import Team from "@/components/team";
 import Benefits from "@/components/benefits";
 import Career from "@/components/career";
 import Clients from "@/components/clients";
-import Cta from "@/components/cta";
+import Partners from "@/components/partners";
 
 export default function About() {
   return (
@@ -22,7 +22,7 @@ export default function About() {
       <Benefits />
       <Career />
       <Clients />
-      <Cta />
+      <Partners />
     </>
   );
 }

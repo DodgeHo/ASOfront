@@ -5,7 +5,7 @@ export default function Faqs() {
         <div className="border-t border-gray-800 py-12 md:py-20 lg:border-0 lg:pt-0">
           {/* Section header */}
           <div className="mb-12">
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-2xl font-semibold text-transparent md:text-3xl">
+            <h2 className="animate-gradient-text pb-4 font-nacelle text-2xl font-semibold text-transparent md:text-3xl">
               Frequently Asked Questions
             </h2>
           </div>

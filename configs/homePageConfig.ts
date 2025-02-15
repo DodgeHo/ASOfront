@@ -1,4 +1,3 @@
-
 type Config = {
   // Hero Section
   heroUpperButtonMarginTop: string
@@ -28,6 +27,10 @@ type Config = {
   heroLowerButtonText: string
   heroLowerButtonFontSize: string
   heroLowerButtonFontWeight: string
+
+  illustrationTopPosition: string;
+  illustrationLightPosition:string;
+  illustrationBottomPosition: string;
 }
 
 /* 全局的主题属性包括颜色，请在文件ASOfront/app/css/style.css中的:root编辑*/
@@ -57,7 +60,7 @@ const homePageConfig: Config = {
   heroThirdText: 'Whether you\'re a project seeking early-stage funding or a participant eager to back the next big idea, Aso connects you, offering transparent tools for capital formation and discovering new communities.',
   heroThirdTextColor: 'white',
   heroThirdFontSize: '0.875rem',
-  heroThirdTextFontWeight: '300', 
+  heroThirdTextFontWeight: '350', 
   heroThirdTextLineHeight: '2',
   heroThirdTextMarginBottom: '4rem',
 
@@ -65,6 +68,10 @@ const homePageConfig: Config = {
   //heroLowerButtonBackground: 全局颜色global-theme-color-gradient-green-to-blue 
   heroLowerButtonFontSize: '1.1rem',
   heroLowerButtonFontWeight: '350',
+
+  illustrationTopPosition: '800px',
+  illustrationLightPosition: '800px',
+  illustrationBottomPosition: '1200px',
 }
 
 export default homePageConfig;

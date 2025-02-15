@@ -19,7 +19,7 @@ export default function Benefits() {
         <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center">
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <h2 className="animate-gradient-text pb-4 nacelle-text ">
               Seeking ambitious problem solvers
             </h2>
             <p className="text-lg text-indigo-200/65">
@@ -99,7 +99,7 @@ export default function Benefits() {
               <div className="relative">
                 {/* Illustration */}
                 <div
-                  className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -translate-x-1/2 translate-y-1/3"
+                  className="centered-absolute-bottom -translate-x-1/2 translate-y-1/3"
                   aria-hidden="true"
                 >
                   <Image
@@ -210,7 +210,7 @@ export default function Benefits() {
                   height={40}
                   alt="Large testimonial"
                 />
-                <p className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-xl font-semibold text-transparent">
+                <p className="animate-gradient-text pb-3 font-nacelle text-xl font-semibold text-transparent">
                   "I am grateful to Open PRO for encouraging me to expand my
                   horizons and strive for greater achievements, both in my
                   career and in my education."

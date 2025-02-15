@@ -30,7 +30,7 @@ export default function Career() {
   return (
     <section className="relative">
       <div
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-64 -translate-x-[80%] opacity-50"
+        className="centered-absolute-bottom top-0-mt-64 -translate-x-[80%] opacity-50"
         aria-hidden="true"
       >
         <Image

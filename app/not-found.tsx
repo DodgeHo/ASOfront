@@ -22,9 +22,9 @@ export default function NotFound() {
                   alt="A funny dog with a strange expression on his face"
                 />
                 <div className="relative -mt-8">
-                  <h1 className="animate-gradient-text pb-8 nacelle-text ">
+                  <div className="animate-gradient-text pb-8 nacelle-text ">
                     Uh oh. That page doesn't exist.
-                  </h1>
+                  </div>
                   <Link
                     className="btn-sm bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%]"
                     href="/"

@@ -5,9 +5,9 @@ export default function Faqs() {
         <div className="border-t border-gray-800 py-12 md:py-20 lg:border-0 lg:pt-0">
           {/* Section header */}
           <div className="mb-12">
-            <h2 className="animate-gradient-text pb-4 font-nacelle text-2xl font-semibold text-transparent md:text-3xl">
+            <div className="animate-gradient-text pb-4 font-nacelle text-2xl font-semibold text-transparent md:text-3xl">
               Frequently Asked Questions
-            </h2>
+            </div>
           </div>
           {/* Faqs */}
           <ul className="grid gap-8 md:grid-cols-2 lg:gap-y-12 xl:gap-x-16">

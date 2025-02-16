@@ -19,9 +19,9 @@ export default function Benefits() {
         <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center">
-            <h2 className="animate-gradient-text pb-4 nacelle-text ">
+            <div className="animate-gradient-text pb-4 nacelle-text ">
               Seeking ambitious problem solvers
-            </h2>
+            </div>
             <p className="text-lg text-indigo-200/65">
               At Open Pro, it's our mission to improve the quality of every
               thing. Helping our customers create incredible products and
@@ -210,11 +210,11 @@ export default function Benefits() {
                   height={40}
                   alt="Large testimonial"
                 />
-                <p className="animate-gradient-text pb-3 font-nacelle text-xl font-semibold text-transparent">
+                <div className="animate-gradient-text pb-3 font-nacelle text-xl font-semibold text-transparent">
                   "I am grateful to Open PRO for encouraging me to expand my
                   horizons and strive for greater achievements, both in my
                   career and in my education."
-                </p>
+                </div>
                 <div className="text-sm font-medium text-gray-200">
                   <span>Mary Pullgat</span>
                   <span className="text-gray-700"> - </span>

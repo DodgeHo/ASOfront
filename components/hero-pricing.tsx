@@ -14,9 +14,9 @@ export default function HeroPricing() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="text-center">
-            <h1 className="animate-gradient-text pb-12 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+            <div className="animate-gradient-text pb-12 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
               Pick the right plan for your business
-            </h1>
+            </div>
           </div>
           <div className="relative">
             {/* Secondary illustration */}

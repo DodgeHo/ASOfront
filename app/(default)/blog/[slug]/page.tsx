@@ -56,9 +56,9 @@ export default async function SinglePost(
               <article>
                 {/* Post header */}
                 <header className="mb-8">
-                  <h1 className="animate-gradient-text pb-4 nacelle-text ">
+                  <div className="animate-gradient-text pb-4 nacelle-text ">
                     {post.metadata.title}
-                  </h1>
+                  </div>
                   <div className="mx-auto mb-5 max-w-3xl">
                     <p className="text-lg text-indigo-200/65">
                       {post.metadata.summary}

@@ -15,9 +15,9 @@ export default function Contact() {
           <div className="py-12 md:py-20">
             {/* Section header */}
             <div className="pb-12 text-center">
-              <h1 className="animate-gradient-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+              <div className="animate-gradient-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
                 Contact us
-              </h1>
+              </div>
               <div className="mx-auto max-w-3xl">
                 <p className="text-xl text-indigo-200/65">
                   We have custom plans to power your business. Tell us your

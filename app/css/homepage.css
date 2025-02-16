@@ -162,3 +162,40 @@
   -webkit-mask-clip: content-box, padding-box;
   -webkit-mask-composite: destination-out;
 }
+
+.providing-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.providing-card-title {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.providing-card-content {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.group-card {
+  display: flex;
+  flex-direction: column;
+}
+.card-inner-content {
+  --border-radius: 10px;
+  background: linear-gradient(to bottom, #05BE9D, #0A77D8);
+  border-radius: var(--border-radius);
+  height: 200px; /* 设置固定高度 */
+  padding: 0 10px;
+  position: relative;
+}
+
+.card-inner-content:hover {
+  background-size: 100% 150%;
+}

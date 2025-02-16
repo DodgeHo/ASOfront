@@ -31,6 +31,12 @@ type Config = {
   illustrationTopPosition: string;
   illustrationLightPosition:string;
   illustrationBottomPosition: string;
+
+  providingCards: {
+    imageSrcPath: string;
+    title: string;
+    content: string;
+  }[];
 }
 
 /* 全局的主题属性包括颜色，请在文件ASOfront/app/css/style.css中的:root编辑*/
@@ -72,6 +78,24 @@ const homePageConfig: Config = {
   illustrationTopPosition: '800px',
   illustrationLightPosition: '800px',
   illustrationBottomPosition: '1200px',
+
+  providingCards: [
+    {
+      imageSrcPath: "/public/images/providing-seed.png",
+      title: "Seed Round",
+      content: "For early-stage projects with longer vesting schedules, ideal for backers supporting emerging ideas."
+    },
+    {
+      imageSrcPath: "/public/images/providing-key.png",
+      title: "Private Sale",
+      content: "Suited for established projects with shorter vesting schedules offering early access for backers."
+    },
+    {
+      imageSrcPath: "/public/images/providing-community.png",
+      title: "Public Sale",
+      content: "Open to the community near TGE, providing broad exposure and participation opportunities before official release."
+    }
+  ]
 }
 
 export default homePageConfig;

@@ -115,9 +115,9 @@ export default function Testimonials() {
       <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
         {/* Section header */}
         <div className="mx-auto max-w-3xl pb-12 text-center">
-          <h2 className="animate-gradient-text pb-4 nacelle-text ">
+          <div className="animate-gradient-text pb-4 nacelle-text ">
             Don't take our word for it
-          </h2>
+          </div>
           <p className="text-lg text-indigo-200/65">
             We provide tech-first solutions that empower decision-makers to
             build healthier and happier workspaces from anywhere in the world.

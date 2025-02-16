@@ -58,9 +58,9 @@ export default function Newsletter() {
                   </span>
                 </div>
               </div>
-              <h1 className="animate-gradient-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+              <div className="animate-gradient-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
                 Join our newsletter
-              </h1>
+              </div>
               <div className="mx-auto max-w-3xl">
                 <p className="text-xl text-indigo-200/65">
                   Sign up to get early access to product launches, promotions,

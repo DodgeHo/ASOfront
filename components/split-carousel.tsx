@@ -51,9 +51,9 @@ export default function SplitCarousel() {
                 </div>
                 <div className="relative mb-6 border-l [border-image:linear-gradient(to_bottom,transparent,--theme(--color-slate-400/.25),transparent)1] after:absolute after:left-0 after:top-0 after:h-4 after:w-px after:origin-bottom after:-translate-y-full after:animate-shine after:bg-[linear-gradient(180deg,transparent,--theme(--color-indigo-500/.5)_25%,--theme(--color-indigo-500)_50%,--theme(--color-indigo-500/.5)_75%,transparent)] after:opacity-0">
                   <div className="mb-4">
-                    <h2 className="animate-gradient-text pb-4 nacelle-text ">
+                    <div className="animate-gradient-text pb-4 nacelle-text ">
                       Improve efficiency & global coverage
-                    </h2>
+                    </div>
                     <p className="text-indigo-200/65">
                       Open is so simple to use, it's easy to overlook the wealth
                       of complex technologies packed under the hood that keep

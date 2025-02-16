@@ -5,9 +5,9 @@ export default function Timeline() {
         <div className="pb-12 md:pb-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-            <h2 className="animate-gradient-text pb-4 nacelle-text ">
+            <div className="animate-gradient-text pb-4 nacelle-text ">
               Bringing the world's ideas to life
-            </h2>
+            </div>
             <p className="text-lg text-indigo-200/65">
               We were frustrated because content tools hadn't innovated, so we
               sat down and drew up what we thought a new product could look

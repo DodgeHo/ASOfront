@@ -39,9 +39,9 @@ export default function Features() {
                 Advanced Controls
               </span>
             </div>
-            <h2 className="animate-gradient-text pb-4 nacelle-text ">
+            <div className="animate-gradient-text pb-4 nacelle-text ">
               Built for modern product teams
-            </h2>
+            </div>
             <p className="text-lg text-indigo-200/65">
               Open AI reads and understands your files, and with nothing more
               than a single line of feedback, so you can go further than the

@@ -27,9 +27,9 @@ export default function PricingHome() {
                 Simple Pricing
               </span>
             </div>
-            <h2 className="animate-gradient-text pb-10 nacelle-text ">
+            <div className="animate-gradient-text pb-10 nacelle-text ">
               Pick the right plan for your business
-            </h2>
+            </div>
           </div>
           {/* Pricing table */}
           <PricingTable />

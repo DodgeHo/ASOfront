@@ -6,8 +6,9 @@ export const metadata = {
 import PageIllustration from "@/components/page-illustration";
 import Hero from "@/components/hero-home";
 import LightBoxSection from "@/components/light-box-section"
-import Workflows from "@/components/workflows";
+import Permissionless from "@/components/permissionless";
 import Features from "@/components/features";
+import Providing from "@/components/providing";
 import Pricing from "@/components/pricing-home";
 import SplitCarousel from "@/components/split-carousel";
 import Partners from "@/components/partners";
@@ -19,8 +20,9 @@ export default function Home() {
       <PageIllustration multiple/>
       <Hero />
       <LightBoxSection />
-      <Workflows />
+      <Permissionless />
       <Features />
+      <Providing />
       <SplitCarousel />
       <Pricing />
       <Partners />

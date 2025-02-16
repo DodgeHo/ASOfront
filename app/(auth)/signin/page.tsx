@@ -12,9 +12,9 @@ export default function SignIn() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="pb-12 text-center">
-            <h1 className="animate-gradient-text nacelle-text ">
+            <div className="animate-gradient-text nacelle-text ">
               Welcome back
-            </h1>
+            </div>
           </div>
           {/* Contact form */}
           <form className="mx-auto max-w-[400px]">

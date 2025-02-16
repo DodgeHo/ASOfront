@@ -13,9 +13,9 @@ export default function HeroAbout() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-20">
-            <h1 className="animate-gradient-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+            <div className="animate-gradient-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
               The story behind the project
-            </h1>
+            </div>
             <div className="mx-auto max-w-3xl">
               <p className="text-xl text-indigo-200/65">
                 Developers are trusted to create an engaging experience for

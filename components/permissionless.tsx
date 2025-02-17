@@ -1,95 +1,91 @@
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import Spotlight from "@/components/spotlight";
+import homePageConfig from "@/configs/homePageConfig";
+
+const IMAGE_SIZE = 100;
+
+interface PermissionCardProps {
+  imageSrc: StaticImageData;
+  imageAlt: string;
+  title: string;
+  content: string;
+}
+
+export function PermissionCard({
+  imageSrc,
+  imageAlt,
+  title,
+  content,
+}: PermissionCardProps) {
+  return (
+    <a className="group-card" href="#0">
+      <div className="permission-card-container flex items-center">
+        <div
+          style={{
+            position: "relative",
+            height: `${IMAGE_SIZE}px`,
+            width: `${IMAGE_SIZE}px`,
+          }}
+        >
+          <Image
+            className=""
+            src={imageSrc}
+            width={IMAGE_SIZE}
+            height={IMAGE_SIZE}
+            alt={imageAlt}
+            style={{
+              position: "absolute",
+              top: "0",
+              left: "0",
+              transform: "translateX(0)",
+            }}
+          />
+        </div>
+        <div className="permission-card">
+          <div className="permission-card-title ">{title}</div>
+          <p className="permission-card-content">{content}</p>
+        </div>
+      </div>
+    </a>
+  );
+}
 
 export default function Permissionless() {
+  const images: { [key: string]: StaticImageData } =
+    homePageConfig.perimissionCards.reduce<{ [key: string]: StaticImageData }>(
+      (acc, card) => {
+        const imagePath = card.imageSrcPath.split("/").pop();
+        acc[card.imageSrcPath] =
+          require(`../public/images/${imagePath}`).default;
+        return acc;
+      },
+      {}
+    );
+
   return (
     <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="pb-12 md:pb-20">
-          {/* Section header */}
-          <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-
-            <div className="animate-gradient-text pb-4 nacelle-text ">
-              Permissionless and Partnered Sales
-              for Every Need
-            </div>
-            <p className="text-lg text-indigo-200/65">
-              ASO pum offers two flexible sale options, designed to fit the needs of both projects and their backers
-            </p>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 pb-12 md:pb-20">
+        <div className="mx-auto max-w-3xl pb-12 text-center ">
+          <div className="animate-gradient-text pb-4 nacelle-text14 ">
+            Permissionless and Partnered Sales for Every Need
           </div>
-          {/* Spotlight items */}
-          <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none grid-cols-1">
-            {/* Card 1 */}
-            <a
-              className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
-              href="#0"
-            >
-              <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-linear-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="mb-3">
-                    <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
-                      <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Built-in Tools
-                      </span>
-                    </span>
-                  </div>
-                  <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
-                  </p>
-                </div>
-              </div>
-            </a>
-            {/* Card 2 */}
-            <a
-              className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
-              href="#0"
-            >
-              <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-linear-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="mb-3">
-                    <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
-                      <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Scale Instantly
-                      </span>
-                    </span>
-                  </div>
-                  <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
-                  </p>
-                </div>
-              </div>
-            </a>
-            {/* Card 3 */}
-            <a
-              className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
-              href="#0"
-            >
-              <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-linear-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="mb-3">
-                    <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
-                      <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Tailored Flows
-                      </span>
-                    </span>
-                  </div>
-                  <p className="text-indigo-200/65">
-                    Streamline the product development flow with a content
-                    platform that's aligned across specs and insights.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </Spotlight>
+          <p className="third-title-description">
+            ASO pum offers two flexible sale options, designed to fit the needs
+            of both projects and their backers
+          </p>
         </div>
+        <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-3xl grid-cols-1">
+          {homePageConfig.perimissionCards.map((card, index) => (
+            <PermissionCard
+              key={card.title}
+              imageSrc={images[card.imageSrcPath]}
+              title={card.title}
+              imageAlt={card.title}
+              content={card.content}
+            />
+          ))}
+        </Spotlight>
       </div>
     </section>
   );

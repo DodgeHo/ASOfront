@@ -12,7 +12,7 @@ export default function SignIn() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="pb-12 text-center">
-            <div className="animate-gradient-text nacelle-text ">
+            <div className="animate-gradient-text nacelle-text14 ">
               Welcome back
             </div>
           </div>

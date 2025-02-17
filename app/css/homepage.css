@@ -1,8 +1,21 @@
+/* common attributes */
+.group-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.third-title-description {
+  font-size: 1.125rem; /* text-lg */
+  color: #BEB9BF;
+}
+
+/*hero Section*/
 .hero-content {
-  max-width: 6xl;
+  max-width: 96rem;
   margin: 0 auto;
   padding: 2rem 1rem;
   text-align: center;
+  z-index: 1;
 }
 
 .hero-title {
@@ -11,57 +24,10 @@
   background-clip: text;
   color: transparent;
   font-family: sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
   animation: gradient 6s linear infinite;
-}
-
-.lightbox-content {
-  max-width: 6xl;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.lightbox-figure{
-  background: var(--color-gradient-green-to-cyan);
-  background-size: 200% auto;
-  background-clip: text;
-  color: transparent;
-  font-family: sans-serif;
-  animation: gradient 6s linear infinite;
-}
-
-.lightbox-figure sub{
-  background: var(--color-gradient-green-to-cyan);
-  background-size: 200% auto;
-  background-clip: text;
-  color: transparent;
-  font-family: inherit;
-  animation: inherit;
-  font-size: 50%;
-  vertical-align:middle;
-}
-.lightbox-content sup{
-  background: var(--color-gradient-green-to-cyan);
-  background-size: 200% auto;
-  background-clip: text;
-  color: transparent;
-  font-family: inherit;
-  animation: inherit;
-  font-size: 100%;
-  vertical-align:middle;
-}
-
-.lightbox-content div {
-  line-height: 0.9;
-}
-.third-width-center {
-  flex:  1;
-  width: 33.33%;
-  text-align: center;
-}
-.text-container {
-  max-width: 48rem;
-  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .hero-text {
@@ -69,7 +35,23 @@
   white-space: pre-line;
 }
 
-.btn-container {
+.hero-second-text {
+  color: var(--global-theme-color-light-cyan);
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+}
+
+.hero-third-text {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 350;
+  line-height: 2;
+  margin-bottom: 4rem;
+}
+
+.hero-btn-container {
   max-width: 10rem;
   margin: 0 auto;
   display: flex;
@@ -85,6 +67,8 @@
   transition: background-size 0.3s;
   border-radius: 12px;
   padding-block: 8px;
+  font-size: 1.1rem;
+  font-weight: 350;
 }
 
 .hero-lower-btn:hover {
@@ -92,7 +76,7 @@
 }
 
 .hero-upper-btn {
-  --border-width: 2px;
+  --border-width: 1.5px;
   --border-radius: 40px;
   --border-color: var(--color-gradient-green-to-blue);
   --left-position: 15%;
@@ -101,6 +85,8 @@
   --height-size: 100%;
   padding-block: 4px;
   max-width: 10rem;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .hero-upper-btn:after {
@@ -128,12 +114,68 @@
   width: var(--width-size);
   border-radius: var(--border-radius);
   background: var(--border-color);
-  
 }
 
-.gradient-container {
-  --border-width: 2px;
-  --border-radius: 10px;
+/* lightbox Section */
+.lightbox-content {
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.lightbox-figure {
+  background: var(--color-gradient-green-to-cyan);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  font-family: sans-serif;
+  animation: gradient 6s linear infinite;
+}
+
+.lightbox-figure sub {
+  background: var(--color-gradient-green-to-cyan);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  font-family: inherit;
+  animation: inherit;
+  font-size: 50%;
+  vertical-align: middle;
+}
+.lightbox-content sup {
+  background: var(--color-gradient-green-to-cyan);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  font-family: inherit;
+  animation: inherit;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+.lightbox-content div {
+  line-height: 0.9;
+}
+.third-width-center {
+  flex: 1;
+  width: 33.33%;
+  text-align: center;
+}
+
+/* permission Section */
+.permission-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-left: 3rem; /* ml-12 equivalent in CSS */
+}
+
+.permission-card-container {
+  --border-width: 1.5px;
+  --border-radius: 15px;
   --border-color: var(--color-gradient-green-to-blue);
   --left-position: 0%;
   --top-position: 0;
@@ -143,8 +185,18 @@
   position: relative;
 }
 
+.permission-card-container:before {
+  content: "";
+  position: absolute;
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  background: radial-gradient(circle, var(--color-super-light-blue) 0%, transparent 100%); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
+  z-index: -1; /* 确保背景在内容后面 */
+}
 
-.gradient-container:after {
+.permission-card-container:after {
   content: "";
   position: absolute;
   left: var(--left-position);
@@ -155,7 +207,8 @@
   border-radius: var(--border-radius);
   background: var(--border-color);
 
-  mask-image: linear-gradient(var(--color-dark-blue), var(--color-dark-blue)), linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
+  mask-image: linear-gradient(var(--color-dark-blue), var(--color-dark-blue)),
+    linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
   mask-clip: content-box, padding-box;
   mask-composite: exclude;
   -webkit-mask-image: var(--mask-bg), var(--mask-bg);
@@ -163,6 +216,125 @@
   -webkit-mask-composite: destination-out;
 }
 
+.permission-card-title {
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  animation: var(--animate-gradient);
+  background: var(--color-gradient-blue-to-light-blue);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.permission-card-content {
+  color: white;
+  font-size: 0.8rem;
+  line-height: 2;
+}
+
+/* Sale models section */
+.sale-models-container {
+  --border-width: 1.5px;
+  --border-radius: 15px;
+  --border-color: var(--color-gradient-green-to-blue);
+  --left-position: 0%;
+  --top-position: 0;
+  --width-size: 100%;
+  --height-size: 100%;
+  padding: 30px;
+  position: relative;
+}
+
+.sale-models-container:after {
+  content: "";
+  position: absolute;
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background: var(--border-color);
+
+  mask-image: var(--mask-bg), var(--mask-bg);
+  mask-clip: content-box, padding-box;
+  mask-composite: exclude;
+  -webkit-mask-image: var(--mask-bg), var(--mask-bg);
+  -webkit-mask-clip: content-box, padding-box;
+  -webkit-mask-composite: destination-out;
+}
+.sale-models-container:before {
+  content: "";
+  position: absolute;
+  left: var(--left-position);
+  top: var (--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  background: radial-gradient(circle, var(--color-super-light-blue) 0%, transparent 100%); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
+
+  z-index: -1; /* 确保背景在内容后面 */
+}
+
+.sale-models-card-container {
+  --border-width: 1.5px;
+  --border-radius: 15px;
+  --border-color: var(--color-gradient-green-to-blue);
+  --left-position: 0%;
+  --top-position: 0;
+  --width-size: 100%;
+  --height-size: 100%;
+  padding: 30px;
+  position: relative;
+}
+
+.sale-models-card-container:after {
+  content: "";
+  position: absolute;
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background: var(--border-color);
+
+  mask-image: var(--mask-bg), var(--mask-bg);
+  mask-clip: content-box, padding-box;
+  mask-composite: exclude;
+  -webkit-mask-image: var(--mask-bg), var(--mask-bg);
+  -webkit-mask-clip: content-box, padding-box;
+  -webkit-mask-composite: destination-out;
+}
+.sale-models-card-container:before {
+  content: "";
+  position: absolute;
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  background: radial-gradient(circle, var(--color-super-light-blue) 0%, transparent 100%); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
+
+  z-index: -1; /* 确保背景在内容后面 */
+}
+
+.sale-models-card-title {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 520;
+  margin-top: 10px;
+}
+
+.sale-models-card-content {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 350;
+}
+
+/* providing Section */
 .providing-card {
   flex: 1;
   display: flex;
@@ -176,26 +348,112 @@
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 1rem;
+  font-weight: 520;
 }
 
 .providing-card-content {
   color: white;
   font-size: 0.8rem;
+  font-weight: 350;
 }
 
-.group-card {
-  display: flex;
-  flex-direction: column;
-}
-.card-inner-content {
-  --border-radius: 10px;
-  background: linear-gradient(to bottom, #05BE9D, #0A77D8);
+.providing-container {
+  --border-radius: 15px;
+  background: var(--color-gradient-blue-to-light-blue);
   border-radius: var(--border-radius);
   height: 200px; /* 设置固定高度 */
   padding: 0 10px;
   position: relative;
 }
 
-.card-inner-content:hover {
+.providing-container:hover {
   background-size: 100% 150%;
+}
+
+/* why-choose Section */
+
+.why-choose-title {
+  background: var(--color-gradient-green-to-cyan);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  font-family: sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  animation: gradient 6s linear infinite;
+  margin-bottom: 2rem;
+}
+
+
+.why-choose-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-blue-500); 
+  margin-left: 1rem; 
+}
+
+.why-choose-card-title {
+  font-size: 1.5rem;
+  text-align: left;
+  animation: var(--animate-gradient);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.why-choose-card-content {
+  color: white;
+  font-size: 0.8rem;
+  line-height: 2;
+  padding-bottom: 0.25rem; /* pt-1 equivalent in CSS */
+
+}
+
+
+
+/* partner Section */
+.partner-container {
+  --border-width: 1.5px;
+  --border-radius: 15px;
+  --border-color: var(--color-gradient-green-to-blue);
+  --left-position: 0%;
+  --top-position: 0;
+  --width-size: 100%;
+  --height-size: 100%;
+  padding: 30px;
+  position: relative;
+}
+
+.partner-container:after {
+  content: "";
+  position: absolute;
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background: var(--border-color);
+
+  mask-image: var(--mask-bg), var(--mask-bg);
+  mask-clip: content-box, padding-box;
+  mask-composite: exclude;
+  -webkit-mask-image: var(--mask-bg), var(--mask-bg);
+  -webkit-mask-clip: content-box, padding-box;
+  -webkit-mask-composite: destination-out;
+}
+
+.partner-container:before {
+  content: "";
+  position: absolute;
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  background: radial-gradient(circle, var(--color-super-light-blue) 0%, var(--color-super-light-blue) 30%, transparent 100%); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
+
+  z-index: -1; /* 确保背景在内容后面 */
 }

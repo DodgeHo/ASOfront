@@ -27,8 +27,8 @@
       var(--color-gray-800)
     )
     border-box;
-  mask-composite: exclude !important;
   mask: linear-gradient(white 0 0) padding-box, linear-gradient(white 0 0);
+  mask-composite: exclude !important;
 }
 
 .header-content::after {
@@ -55,6 +55,12 @@
   .nav-links {
     gap: 2rem;
   }
+}
+
+.nav-links .icon-link {
+  padding: 0 0px; /* 调整内边距以使图标更紧凑 */
+  display: flex;
+  align-items: center;
 }
 
 .nav-link {

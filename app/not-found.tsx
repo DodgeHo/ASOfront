@@ -22,7 +22,7 @@ export default function NotFound() {
                   alt="A funny dog with a strange expression on his face"
                 />
                 <div className="relative -mt-8">
-                  <div className="animate-gradient-text pb-8 nacelle-text ">
+                  <div className="animate-gradient-text pb-8 nacelle-text14 ">
                     Uh oh. That page doesn't exist.
                   </div>
                   <Link

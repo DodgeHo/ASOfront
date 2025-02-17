@@ -13,7 +13,7 @@ export default function HeroAbout() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-20">
-            <div className="animate-gradient-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+            <div className="animate-gradient-text pb-5 nacelle-text45">
               The story behind the project
             </div>
             <div className="mx-auto max-w-3xl">

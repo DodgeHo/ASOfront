@@ -4,79 +4,6 @@
 @import './additional-styles/utility-patterns.css' layer(components);
 @import './additional-styles/theme.css';
 
-@plugin "@tailwindcss/forms" {
-  strategy: base;
-}
-@plugin "@tailwindcss/typography" {
-  strategy: base;
-}
-
-@theme {
-  --font-inter: Inter, sans-serif;
-  --font-nacelle: Nacelle, sans-serif;
-
-  --text-xs: 0.8125rem;
-  --text-xs--line-height: 1.5384;
-  --text-sm: 0.875rem;
-  --text-sm--line-height: 1.5715;
-  --text-base: 0.9375rem;
-  --text-base--line-height: 1.5333;
-  --text-base--letter-spacing: -0.0125em;
-  --text-lg: 1.125rem;
-  --text-lg--line-height: 1.5;
-  --text-lg--letter-spacing: -0.0125em;
-  --text-xl: 1.25rem;
-  --text-xl--line-height: 1.5;
-  --text-xl--letter-spacing: -0.0125em;
-  --text-2xl: 1.5rem;
-  --text-2xl--line-height: 1.415;
-  --text-2xl--letter-spacing: -0.0268em;
-  --text-3xl: 1.75rem;
-  --text-3xl--line-height: 1.3571;
-  --text-3xl--letter-spacing: -0.0268em;
-  --text-4xl: 2.5rem;
-  --text-4xl--line-height: 1.1;
-  --text-4xl--letter-spacing: -0.0268em;
-  --text-5xl: 3.5rem;
-  --text-5xl--line-height: 1;
-  --text-5xl--letter-spacing: -0.0268em;
-  --text-6xl: 4rem;
-  --text-6xl--line-height: 1;
-  --text-6xl--letter-spacing: -0.0268em;
-  --text-7xl: 4.5rem;
-  --text-7xl--line-height: 1;
-  --text-7xl--letter-spacing: -0.0268em;
-
-  --animate-shine: shine 5s ease-in-out 500ms infinite;
-  --animate-gradient: gradient 6s linear infinite;  
-
-  @keyframes shine {
-    0% {
-      top: 0;
-      transform: scaleY(5);
-      opacity: 0;
-    }
-    10% {
-      opacity: 0.8;
-    }
-    20% {
-      top: 100%;
-      transform: scaleY(10);
-      opacity: 0;
-    }
-    100% {
-      top: 100%;
-      transform: scaleY(1);
-      opacity: 0;
-    }
-  }
-  @keyframes gradient {
-    to {
-      background-position: 200% center;
-    }
-  }
-}
-
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -105,19 +32,22 @@
   --color-indigo-400: #818cf8;
   --color-indigo-500-65: #6366f1a6;
   --color-blue-500: #3b83f6d6;
-  --color-dark-blue: #4a80dde5;
+  --color-super-light-blue: #0044ff33;
   --color-gray-700: #4b5563;
   --color-green-500: #B3F37A;
   --color-mid-gray: #122a4618;
   --color-dark-navy: #102230; /*background color*/
-  --color-gradient-green-to-blue: linear-gradient(to bottom, #05BE9D, #0A77D8);
+  --color-green-600: #05BE9D;
+  --color-blue-700: #0A77D8;
+  --color-green-400: #8AE4C5;
+  --color-cyan-500: #6FDCDE;
+  --color-gradient-green-to-blue: linear-gradient(to bottom, var(--color-green-600), var(--color-blue-700));
   --color-gradient-purple-to-blue: linear-gradient(to top, #4c51bf, #5a67d8);
-  --color-gradient-green-to-cyan: linear-gradient(to bottom, var(--color-green-500), #8AE4C5, #6FDCDE);
-  --color-gradient-blue-to-light-blue: linear-gradient(to bottom, #0B5FFF, #29BCFF);
-  --mask-bg: linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
+  --color-gradient-green-to-cyan: linear-gradient(to bottom, var(--color-green-500), var(--color-green-400), var(--color-cyan-500));
+  --color-gradient-blue-to-light-blue: linear-gradient(to bottom, var(--color-blue-600), var(--color-light-blue));
+  --mask-bg: linear-gradient(red, red); /*使用红色过滤，蓝色和绿色都将不可见，因此显现为透明 */
   --mask-clip: content-box, padding-box;
   --animate-gradient: gradient 6s linear infinite;
-
 }
 
 .body {
@@ -163,7 +93,7 @@
   color: transparent;
 }
 
-.nacelle-text {
+.nacelle-text14 {
   font-family: var(--font-nacelle);
   font-size: var(--text-xl);
   font-weight: 600;
@@ -171,10 +101,36 @@
 }
 
 @media (min-width: 768px) {
-  .nacelle-text {
+  .nacelle-text14 {
     font-size: var(--text-4xl);
   }
 }
+.nacelle-text45 {
+  font-family: var(--font-nacelle);
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .nacelle-text45 {
+    font-size: var(--text-5xl);
+  }
+}
+.nacelle-text23 {
+  font-family: var(--font-nacelle);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .nacelle-text23 {
+    font-size: var(--text-3xl);
+  }
+}
+
+
 .text-link {
   color: var(--color-indigo-200-65); 
   transition: color 0.2s;

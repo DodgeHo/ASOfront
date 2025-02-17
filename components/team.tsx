@@ -83,7 +83,7 @@ export default function Team() {
         <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-            <div className="animate-gradient-text nacelle-text ">
+            <div className="animate-gradient-text nacelle-text14 ">
               It's all about the people
             </div>
           </div>

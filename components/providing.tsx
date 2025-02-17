@@ -4,6 +4,8 @@ import Spotlight from "@/components/spotlight";
 import homePageConfig from "@/configs/homePageConfig";
 import CirclePlate from "@/public/images/providing-circle-plate.png";
 
+const IMAGE_HEIGHT = 40; // 提取的常量
+
 interface ProvidingCardProps {
   imageSrc: StaticImageData;
   imageAlt: string;
@@ -25,12 +27,12 @@ export function ProvidingCard({
   return (
     <a className="group-card" href="#0">
       <div
-        className="card-inner-content"
+        className="providing-container"
         style={{ background: `linear-gradient(${angle}deg, #06D678, #3E65EF)` }}
       >
         {/* Image */}
         <div
-          style={{ position: "relative", height: "40px", overflow: "visible" }}
+          style={{ position: "relative", height: `${IMAGE_HEIGHT}px`, overflow: "visible" }}
         >
           <Image
             className=""
@@ -40,7 +42,7 @@ export function ProvidingCard({
             alt={imageAlt}
             style={{
               position: "absolute",
-              top: "-40px",
+              top: `-${IMAGE_HEIGHT}px`,
               left: "50%",
               transform: "translateX(-50%)",
             }}
@@ -69,11 +71,11 @@ export default function Providing() {
     );
 
   return (
-    <section className=" pb-12 md:pb-20">
+    <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 ">
         {/* Section header */}
         <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-          <div className="animate-gradient-text pb-4 nacelle-text ">
+          <div className="animate-gradient-text pb-4 nacelle-text14 ">
             Providing Opportunities at Every Stage
           </div>
         </div>

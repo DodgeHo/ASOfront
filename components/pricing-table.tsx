@@ -9,24 +9,8 @@ export default function PricingTable() {
     <div>
       {/* Pricing toggle */}
       <label className="mb-16 flex cursor-pointer items-center justify-center gap-4 text-indigo-200/65">
-        <span className="flex-1 text-right" aria-hidden="true">
-          Billed Annually
-        </span>
-        <span className="sr-only">Billed Annually</span>
-        <input
-          role="switch"
-          type="checkbox"
-          className="peer sr-only"
-          checked={annual}
-          onChange={() => setAnnual(!annual)}
-        />
-        <div
-          className="peer relative h-6 w-11 rounded-full bg-gray-800 after:absolute after:start-[2px] after:top-0.5 after:h-5 after:w-5 after:rounded-full after:bg-gray-200 after:transition-all peer-checked:bg-indigo-500 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus-visible:ring-4 peer-focus-visible:ring-indigo-200"
-          aria-hidden="true"
-        />
-        <span className="flex-1 text-left" aria-hidden="true">
-          Billed Monthly
-        </span>
+
+
       </label>
       <div className="mx-auto grid max-w-xs items-start gap-8 md:max-w-2xl md:grid-cols-2 xl:max-w-none xl:grid-cols-4 xl:gap-6">
         {/* Pricing table 1 */}

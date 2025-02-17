@@ -14,12 +14,12 @@ export default function Partners() {
         <div className="bg-linear-to-r from-transparent via-gray-800/50 py-12 md:py-20">
           <div className="mx-auto max-w-3xl text-center">
             <div
-              className="animate-gradient-text pb-8 nacelle-text "
-              data-aos="fade-up"
+              className="animate-gradient-text pb-8 nacelle-text14 "
+              
             >
               Our Partners & Backers
             </div>
-            <div className="gradient-container flex justify-center space-x-4 padding-10">
+            <div className="partner-container flex justify-center space-x-4 padding-10">
               <Image src={partnerLogo1} alt="Partner 1" height={imageHeight} width={imageHeight * (partnerLogo1.width / partnerLogo1.height)} />
               <Image src={partnerLogo2} alt="Partner 2" height={imageHeight} width={imageHeight * (partnerLogo2.width / partnerLogo2.height)} />
               <Image src={partnerLogo3} alt="Partner 3" height={imageHeight} width={imageHeight * (partnerLogo3.width / partnerLogo3.height)} />

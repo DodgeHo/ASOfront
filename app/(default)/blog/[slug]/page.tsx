@@ -56,7 +56,7 @@ export default async function SinglePost(
               <article>
                 {/* Post header */}
                 <header className="mb-8">
-                  <div className="animate-gradient-text pb-4 nacelle-text ">
+                  <div className="animate-gradient-text pb-4 nacelle-text14 ">
                     {post.metadata.title}
                   </div>
                   <div className="mx-auto mb-5 max-w-3xl">

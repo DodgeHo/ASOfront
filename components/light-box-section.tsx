@@ -30,8 +30,7 @@ export default function LightBoxSection() {
             display: "flex",
             justifyContent: "space-between",
             WebkitBackgroundClip: "text",
-            fontSize: homePageConfig.heroTitleFontSize,
-            fontWeight: homePageConfig.heroTitleFontWeight,
+            fontSize: "3.5rem",
             marginBottom: homePageConfig.heroTitleMarginBottom,
           }}
         >
@@ -43,10 +42,8 @@ export default function LightBoxSection() {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            color: homePageConfig.heroThirdTextColor,
-            fontSize: homePageConfig.heroThirdFontSize,
+            color: "white",
             marginBottom: homePageConfig.heroThirdTextMarginBottom,
-            fontWeight: homePageConfig.heroThirdTextFontWeight,
             lineHeight: homePageConfig.heroThirdTextLineHeight,
             transform: "translateX(-10px)",
           }}

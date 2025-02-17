@@ -58,7 +58,7 @@ export default function Newsletter() {
                   </span>
                 </div>
               </div>
-              <div className="animate-gradient-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+              <div className="animate-gradient-text pb-5 nacelle-text45">
                 Join our newsletter
               </div>
               <div className="mx-auto max-w-3xl">

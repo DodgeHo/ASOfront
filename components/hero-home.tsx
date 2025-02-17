@@ -8,10 +8,10 @@ export default function HeroHome() {
         className="hero-content"
         style={{ minHeight: homePageConfig.illustrationTopPosition }}
       >
-        <div>
-          <div className="text-container">
+        <div className="max-w-3xl mx-auto">
+          <div>
             <div
-              className="btn-container"
+              className="hero-btn-container"
               data-aos="fade-up"
               style={{
                 marginTop: homePageConfig.heroUpperButtonMarginTop,
@@ -21,10 +21,6 @@ export default function HeroHome() {
               <a
                 className="btn hero-upper-btn"
                 href="#0"
-                style={{
-                  fontSize: homePageConfig.heroUpperButtonFontSize,
-                  fontWeight: homePageConfig.heroUpperButtonFontWeight,
-                }}
               >
                 <span className="relative inline-flex items-center">
                   {homePageConfig.heroUpperButtonText}
@@ -38,23 +34,19 @@ export default function HeroHome() {
             data-aos-delay={200}
             style={{
               WebkitBackgroundClip: "text",
-              fontSize: homePageConfig.heroTitleFontSize,
-              fontWeight: homePageConfig.heroTitleFontWeight,
               marginBottom: homePageConfig.heroTitleMarginBottom,
             }}
           >
             {homePageConfig.heroTitle}
           </div>
-          <div className="text-container">
+          <div>
             <p
               className="hero-text"
               data-aos="fade-up"
               data-aos-delay={400}
               style={{
                 color: "var(--global-theme-color-light-cyan)",
-                fontSize: homePageConfig.heroSecondFontSize,
                 marginBottom: homePageConfig.heroSecondTextMarginBottom,
-                fontWeight: homePageConfig.heroSecondTextFontWeight,
                 lineHeight: homePageConfig.heroSecondTextLineHeight,
               }}
             >
@@ -65,28 +57,19 @@ export default function HeroHome() {
               data-aos="fade-up"
               data-aos-delay={600}
               style={{
-                color: homePageConfig.heroThirdTextColor,
-                fontSize: homePageConfig.heroThirdFontSize,
                 marginBottom: homePageConfig.heroThirdTextMarginBottom,
-                fontWeight: homePageConfig.heroThirdTextFontWeight,
                 lineHeight: homePageConfig.heroThirdTextLineHeight,
               }}
             >
               {homePageConfig.heroThirdText}
             </p>
             <div
-              className="btn-container"
+              className="hero-btn-container"
               data-aos="fade-up"
               data-aos-delay={1000}
             >
               <a className="btn hero-lower-btn" href="#0">
-                <span
-                  className="relative inline-flex items-center"
-                  style={{
-                    fontSize: homePageConfig.heroLowerButtonFontSize,
-                    fontWeight: homePageConfig.heroLowerButtonFontWeight,
-                  }}
-                >
+                <span className="relative inline-flex items-center" >
                   {homePageConfig.heroLowerButtonText}
                 </span>
               </a>

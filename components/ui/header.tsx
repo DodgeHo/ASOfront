@@ -6,7 +6,10 @@ import { LiLink } from "./LinkComponents";
 import globalConfig from "@/configs/globalConfig";
 import "../../app/css/header.css";
 import Image from "next/image";
-
+import logo from "@/public/images/logo.png";
+import walletIcon from "@/public/images/wallet.png";
+import emailIcon from "@/public/images/email.png";
+import personaIcon from "@/public/images/persona.png";
 const ICON_SIZE = 30;
 
 export default function Header() {
@@ -41,15 +44,15 @@ export default function Header() {
               </Dropdown>
             */}
             <div className="flex space-x-2">
-              <LiLink href="/Wallet" className="icon-link">
-                <Image src="/images/wallet.png" alt="Wallet" width={ICON_SIZE} height={ICON_SIZE} />
-              </LiLink>
-              <LiLink href="/email" className="icon-link">
-                <Image src="/images/email.png" alt="Email" width={ICON_SIZE} height={ICON_SIZE} />
-              </LiLink>
-              <LiLink href="/signin" className="icon-link">
-                <Image src="/images/persona.png" alt="Persona" width={ICON_SIZE} height={ICON_SIZE} />
-              </LiLink>
+                <LiLink href="/Wallet" className="icon-link">
+                <Image src={walletIcon} alt="Wallet" width={ICON_SIZE} height={ICON_SIZE} />
+                </LiLink>
+                <LiLink href="/email" className="icon-link">
+                <Image src={emailIcon} alt="Email" width={ICON_SIZE} height={ICON_SIZE} />
+                </LiLink>
+                <LiLink href="/signin" className="icon-link">
+                <Image src={personaIcon} alt="Persona" width={ICON_SIZE} height={ICON_SIZE} />
+                </LiLink>
             </div>
           </ul>
         </nav>

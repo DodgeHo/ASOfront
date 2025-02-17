@@ -45,9 +45,11 @@ export default function HeroHome() {
               data-aos="fade-up"
               data-aos-delay={400}
               style={{
-                color: "var(--global-theme-color-light-cyan)",
-                marginBottom: homePageConfig.heroSecondTextMarginBottom,
-                lineHeight: homePageConfig.heroSecondTextLineHeight,
+              color: "var(--global-theme-color-light-cyan)",
+              marginBottom: homePageConfig.heroSecondTextMarginBottom,
+              lineHeight: homePageConfig.heroSecondTextLineHeight,
+              fontSize: '1.375rem',
+              fontWeight:  '500',
               }}
             >
               {homePageConfig.heroSecondText}

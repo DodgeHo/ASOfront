@@ -1,10 +1,10 @@
 "use client";
-
+import IconLinks from "./IconLinks";
 import { useState, useRef, useEffect } from "react";
 import { Transition } from "@headlessui/react";
-import { LiLink } from "./LinkComponents"; 
+import { LiLink } from "./LinkComponents";
 import globalConfig from "@/configs/globalConfig";
-import { FaBars } from "react-icons/fa"; 
+import { FaBars } from "react-icons/fa";
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
@@ -39,11 +39,13 @@ export default function MobileMenu() {
   });
 
   return (
-    <div className="flex md:hidden">
+    <div className="flex md:hidden mobile-menu justify-between">
       {/* Hamburger button */}
       <button
         ref={trigger}
-        className={`group inline-flex h-8 w-8 items-center justify-center text-center text-gray-200 transition ${mobileNavOpen && "active"}`}
+        className={`group inline-flex h-8 w-8 items-center justify-center text-center text-gray-200 transition ${
+          mobileNavOpen && "active"
+        }`}
         aria-controls="mobile-nav"
         aria-expanded={mobileNavOpen}
         onClick={() => setMobileNavOpen(!mobileNavOpen)}
@@ -51,7 +53,7 @@ export default function MobileMenu() {
         <span className="sr-only">Menu</span>
         <FaBars className="pointer-events-none fill-current" size={16} />
       </button>
-
+      <IconLinks />
       {/*Mobile navigation */}
       <div ref={mobileNav}>
         <Transition
@@ -62,7 +64,11 @@ export default function MobileMenu() {
         >
           <ul className="p-2 text-sm">
             {globalConfig.menuLinks.map((link) => (
-              <LiLink key={link.href} href={link.href} onClick={() => setMobileNavOpen(false)}>
+              <LiLink
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileNavOpen(false)}
+              >
                 {link.label}
               </LiLink>
             ))}

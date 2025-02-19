@@ -8,10 +8,9 @@ export default function LightBoxSection() {
     <>
       <div className="lightbox-content">
         <div
-          className="pointer-events-none absolute w-full left-1/2 -z-10 -translate-x-1/2 opacity-80"
+          className="pointer-events-none absolute w-full left-1/2 -z-10 -translate-x-1/2 opacity-80 h-[350px] lg:h-[450px] sm:h-[350px] "
           style={{
             top: homePageConfig.illustrationLightPosition,
-            height: '450px',
           }}
           aria-hidden="true"
         >
@@ -22,32 +21,20 @@ export default function LightBoxSection() {
           />
         </div>
 
-        <div
-          className="lightbox-figure"
-          data-aos="fade-up"
-          data-aos-delay={1200}
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            WebkitBackgroundClip: "text",
-            fontSize: "3.5rem",
-            marginBottom: homePageConfig.heroTitleMarginBottom,
-          }}
-        >
-          <div className="third-width-center">100K<sup>+</sup></div>
-          <div className="third-width-center">$3<sub>B</sub><sup>+</sup></div>
-          <div className="third-width-center">$1.5<sub>B</sub><sup>+</sup></div>
+        <div className="lightbox-figure">
+          <div className="third-width-center">
+            100K<sup>+</sup>
+          </div>
+          <div className="third-width-center">
+            $3<sub>B</sub>
+            <sup>+</sup>
+          </div>
+          <div className="third-width-center">
+            $1.5<sub>B</sub>
+            <sup>+</sup>
+          </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            color: "white",
-            marginBottom: homePageConfig.heroThirdTextMarginBottom,
-            lineHeight: homePageConfig.heroThirdTextLineHeight,
-            transform: "translateX(-10px)",
-          }}
-        >
+        <div className="lightbox-stats">
           <div className="third-width-center">Total Participants</div>
           <div className="third-width-center">Funds Raised</div>
           <div className="third-width-center">Volume Traded</div>

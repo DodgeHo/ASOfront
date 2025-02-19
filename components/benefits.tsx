@@ -19,7 +19,7 @@ export default function Benefits() {
         <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center">
-            <div className="animate-gradient-text pb-4 nacelle-text14 ">
+            <div className="animate-gradient-text pb-4 nacelle-text24 ">
               Seeking ambitious problem solvers
             </div>
             <p className="text-lg text-indigo-200/65">

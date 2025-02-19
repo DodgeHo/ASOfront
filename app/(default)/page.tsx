@@ -9,10 +9,10 @@ import LightBoxSection from "@/components/light-box-section"
 import Permissionless from "@/components/permissionless";
 import SaleModels from "@/components/sale-models";
 import Providing from "@/components/providing";
-import Pricing from "@/components/pricing-home";
+import WhyChoose from "@/components/why-choose";
+import Storys from "@/components/storys";
 import Partners from "@/components/partners";
 import "../css/homepage.css"
-import WhyChoose from "@/components/why-choose";
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
       <SaleModels />
       <Providing />
       <WhyChoose />
-      <Pricing />
+      <Storys />
       <Partners />
     </>
   );

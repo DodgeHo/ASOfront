@@ -1,9 +1,9 @@
 import Image from "next/image";
 import BlurredShape from "@/public/images/blurred-shape.svg";
-import TestimonialImage from "@/public/images/large-testimonial-01.jpg";
-import PricingTable from "@/components/pricing-table";
+import homePageConfig from "@/configs/homePageConfig";
+import StorysCards from "@/components/storys-cards";
 
-export default function PricingHome() {
+export default function Storys() {
   return (
     <section className="relative">
       <div
@@ -18,14 +18,16 @@ export default function PricingHome() {
           alt="Blurred shape"
         />
       </div>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl text-center">
-            <div className="why-choose-title">Previous Success Stories </div>
+            <div className="why-choose-title">
+              {homePageConfig.storysTitle}
+            </div>
           </div>
           {/* Pricing table */}
-          <PricingTable />
+          <StorysCards slides={homePageConfig.storySlides} />
           {/* Single testimonial */}
         </div>
       </div>

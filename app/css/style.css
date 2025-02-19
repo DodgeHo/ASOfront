@@ -25,7 +25,7 @@
 :root {
   --color-blue-600: #0B5FFF;
   --color-light-blue: #29BCFF;
-  --color-light-cyan: #CCEDF2;
+  --color-light-cyan: #CEEAEE;
   --color-indigo-500: #6366f1;
   --color-indigo-700: #4f46e5;
   --color-indigo-200-65: #818cf8a6;
@@ -34,16 +34,18 @@
   --color-blue-500: #3b83f6d6;
   --color-super-light-blue: #0044ff33;
   --color-gray-700: #4b5563;
-  --color-green-500: #B3F37A;
+  --color-green-500: #B3F37A;/*title color 1*/
   --color-mid-gray: #122a4618;
-  --color-dark-navy: #102230; /*background color*/
+  --color-light-gray: #beb9bf;
+  --color-bg-navy: #102230; /*background color*/
+  --color-dark-navy: #062E4B;
   --color-green-600: #05BE9D;
   --color-blue-700: #0A77D8;
   --color-green-400: #8AE4C5;
-  --color-cyan-500: #6FDCDE;
+  --color-cyan-500: #6FDCDE;/*title color 2*/
   --color-gradient-green-to-blue: linear-gradient(to bottom, var(--color-green-600), var(--color-blue-700));
   --color-gradient-purple-to-blue: linear-gradient(to top, #4c51bf, #5a67d8);
-  --color-gradient-green-to-cyan: linear-gradient(to bottom, var(--color-green-500), var(--color-green-400), var(--color-cyan-500));
+  --color-gradient-green-to-cyan: linear-gradient(to bottom, var(--color-green-500), var(--color-green-400), var(--color-cyan-500));/*title color*/
   --color-gradient-blue-to-light-blue: linear-gradient(to bottom, var(--color-blue-600), var(--color-light-blue));
   --mask-bg: linear-gradient(red, red); /*使用红色过滤，蓝色和绿色都将不可见，因此显现为透明 */
   --mask-clip: content-box, padding-box;
@@ -51,7 +53,7 @@
 }
 
 .body {
-  background-color: var(--color-dark-navy);
+  background-color: var(--color-bg-navy);
   font-family: var(--font-inter);
   font-size: var(--text-base);
   color: var(--color-gray-200);
@@ -93,18 +95,18 @@
   color: transparent;
 }
 
-.nacelle-text14 {
+.nacelle-text24 {
   font-family: var(--font-nacelle);
-  font-size: var(--text-xl);
+  font-size: var(--text-4xl);
   font-weight: 600;
   color: transparent;
 }
-
-@media (min-width: 768px) {
-  .nacelle-text14 {
-    font-size: var(--text-4xl);
+@media (max-width: 460px) {
+  .nacelle-text24 {
+    font-size: var(--text-2xl);
   }
 }
+
 .nacelle-text45 {
   font-family: var(--font-nacelle);
   font-size: var(--text-4xl);
@@ -112,7 +114,7 @@
   color: transparent;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 460px) {
   .nacelle-text45 {
     font-size: var(--text-5xl);
   }
@@ -124,7 +126,7 @@
   color: transparent;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 460px) {
   .nacelle-text23 {
     font-size: var(--text-3xl);
   }

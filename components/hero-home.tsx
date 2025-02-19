@@ -14,8 +14,8 @@ export default function HeroHome() {
               className="hero-btn-container"
               data-aos="fade-up"
               style={{
-                marginTop: homePageConfig.heroUpperButtonMarginTop,
-                marginBottom: homePageConfig.heroUpperButtonMarginBottom,
+                marginTop: "5rem",
+                marginBottom: "1rem",
               }}
             >
               <a
@@ -34,33 +34,30 @@ export default function HeroHome() {
             data-aos-delay={200}
             style={{
               WebkitBackgroundClip: "text",
-              marginBottom: homePageConfig.heroTitleMarginBottom,
+              marginBottom: "2rem",
             }}
           >
             {homePageConfig.heroTitle}
           </div>
           <div>
             <p
-              className="hero-text"
+              className="hero-second-text"
               data-aos="fade-up"
               data-aos-delay={400}
               style={{
-              color: "var(--global-theme-color-light-cyan)",
-              marginBottom: homePageConfig.heroSecondTextMarginBottom,
-              lineHeight: homePageConfig.heroSecondTextLineHeight,
-              fontSize: '1.375rem',
-              fontWeight:  '500',
+                marginBottom: "2.25rem",
+                lineHeight: "1.5",
               }}
             >
               {homePageConfig.heroSecondText}
             </p>
             <p
-              className="hero-text"
+              className="hero-third-text"
               data-aos="fade-up"
               data-aos-delay={600}
               style={{
-                marginBottom: homePageConfig.heroThirdTextMarginBottom,
-                lineHeight: homePageConfig.heroThirdTextLineHeight,
+                marginBottom: "4rem",
+                lineHeight: "2",
               }}
             >
               {homePageConfig.heroThirdText}

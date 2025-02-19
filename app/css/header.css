@@ -1,34 +1,9 @@
 .header-content {
-  max-width: 96rem;
   position: relative;
-  display: flex;
   height: 3.5rem;
-  align-items: center;
-  flex-grow: 1;
-  justify-content: space-between;
-  gap: 0.75rem;
-  background-color: rgba(31, 41, 55, 0.9);
+  background: linear-gradient(to bottom, var(--color-bg-navy), var(--color-dark-navy));
   width: 100%;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.header-content::before {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  border: 1px solid transparent;
-  background: linear-gradient(
-      to right,
-      var(--color-gray-800),
-      var(--color-gray-700),
-      var(--color-gray-800)
-    )
-    border-box;
-  mask: linear-gradient(white 0 0) padding-box, linear-gradient(white 0 0);
-  mask-composite: exclude !important;
+  padding-top: 0.75rem;
 }
 
 .header-content::after {
@@ -61,6 +36,32 @@
   padding: 0 0px; /* 调整内边距以使图标更紧凑 */
   display: flex;
   align-items: center;
+}
+
+.icon-link {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-link img {
+  transition: opacity 0.3s ease;
+}
+
+.icon-link img.active-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.icon-link:hover img.default-icon,
+.icon-link:active img.default-icon {
+  opacity: 0;
+}
+
+.icon-link:hover img.active-icon,
+.icon-link:active img.active-icon {
+  opacity: 1;
 }
 
 .nav-link {
@@ -157,4 +158,8 @@
 
 .register-link:hover {
   background-size: 100% 150%;
+}
+
+.mobile-menu li::marker {
+  content: none;
 }

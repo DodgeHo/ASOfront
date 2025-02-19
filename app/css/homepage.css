@@ -1,12 +1,43 @@
 /* common attributes */
+:root {
+  --permission-icon-size: 100px;
+  --sale-model-icon-size: 60px;
+  --providing-icon-height: 40px;
+  --why-choose-icon-size: 90px;
+  --arrow-width: 40px;
+  --slider-padding: calc(var(--arrow-width));
+  --partner-image-height: 30px; 
+}
+@media (min-width: 461px) and (max-width: 639px) {
+  :root {
+    --permission-icon-size: 70px;
+    --sale-model-icon-size: 48px;
+    --providing-icon-height: 34px;
+  }
+}
+@media (max-width: 460px) {
+  :root {
+    --permission-icon-size: 60px;
+    --sale-model-icon-size: 40px;
+    --providing-icon-height: 30px;
+    --arrow-width: 20px;
+
+  }
+}
+
 .group-card {
   display: flex;
   flex-direction: column;
 }
 
 .third-title-description {
-  font-size: 1.125rem; /* text-lg */
-  color: #BEB9BF;
+  font-size: 1.125rem;
+  color: var(--color-light-gray);
+}
+@media (max-width: 460px) {
+  .third-title-description {
+    font-size: 0.75rem;
+  }
 }
 
 /*hero Section*/
@@ -30,25 +61,33 @@
   margin-bottom: 2rem;
 }
 
-.hero-text {
-  color: rgb(255, 255, 255);
-  white-space: pre-line;
-}
-
 .hero-second-text {
-  color: var(--global-theme-color-light-cyan);
+  color: var(--color-light-cyan);
   font-size: 1.375rem;
   font-weight: 500;
   line-height: 1.5;
   margin-bottom: 2.25rem;
+  white-space: pre-line;
 }
-
 .hero-third-text {
-  color: white;
-  font-size: 0.875rem;
+  color: rgb(255, 255, 255);
+  white-space: pre-line;
   font-weight: 350;
   line-height: 2;
   margin-bottom: 4rem;
+}
+@media (max-width: 460px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-second-text {
+    font-size: 1rem;
+  }
+
+  .hero-third-text {
+    font-size: 0.75rem;
+  }
 }
 
 .hero-btn-container {
@@ -123,14 +162,25 @@
   padding: 2rem 1rem;
   text-align: center;
 }
-
+.lightbox-stats {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 4rem;
+  line-height: 2;
+  transform: translateX(-10px);
+}
 .lightbox-figure {
   background: var(--color-gradient-green-to-cyan);
   background-size: 200% auto;
   background-clip: text;
   color: transparent;
   font-family: sans-serif;
-  animation: gradient 6s linear infinite;
+  display: flex;
+  justify-content: space-between;
+  -webkit-background-clip: text;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 .lightbox-figure sub {
@@ -143,7 +193,7 @@
   font-size: 50%;
   vertical-align: middle;
 }
-.lightbox-content sup {
+.lightbox-figure sup {
   background: var(--color-gradient-green-to-cyan);
   background-size: 200% auto;
   background-clip: text;
@@ -163,6 +213,26 @@
   text-align: center;
 }
 
+@media (max-width: 1024px) {
+  .lightbox-figure {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .lightbox-stats {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 460px) {
+  .lightbox-figure {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .lightbox-stats {
+    font-size: 50%;
+  }
+}
+
 /* permission Section */
 .permission-card {
   flex: 1;
@@ -170,9 +240,8 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 0.5rem;
-  margin-left: 3rem; /* ml-12 equivalent in CSS */
+  margin-left: 3rem;
 }
-
 .permission-card-container {
   --border-width: 1.5px;
   --border-radius: 15px;
@@ -184,7 +253,14 @@
   padding: 30px;
   position: relative;
 }
-
+@media (max-width: 640px) {
+  .permission-card {
+    margin-left: 1rem;
+  }
+  .permission-card-container {
+    padding: 10px;
+  }
+}
 .permission-card-container:before {
   content: "";
   position: absolute;
@@ -192,7 +268,11 @@
   top: var(--top-position);
   width: var(--width-size);
   height: var(--height-size);
-  background: radial-gradient(circle, var(--color-super-light-blue) 0%, transparent 100%); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
+  background: radial-gradient(
+    circle,
+    var(--color-super-light-blue) 0%,
+    transparent 100%
+  ); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
   z-index: -1; /* 确保背景在内容后面 */
 }
 
@@ -232,9 +312,36 @@
   color: white;
   font-size: 0.8rem;
   line-height: 2;
+  white-space: pre-wrap;
+}
+@media (max-width: 640px) {
+  .permission-card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  .permission-card-content {
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
 }
 
 /* Sale models section */
+
+.sale-models-grid {
+  max-width: 5xl;
+  padding: 4px 6px 12px 20px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .sale-models-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 16px;
+  }
+}
+
 .sale-models-container {
   --border-width: 1.5px;
   --border-radius: 15px;
@@ -272,12 +379,16 @@
   top: var (--top-position);
   width: var(--width-size);
   height: var(--height-size);
-  background: radial-gradient(circle, var(--color-super-light-blue) 0%, transparent 100%); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
+  background: radial-gradient(
+    circle,
+    var(--color-super-light-blue) 0%,
+    transparent 100%
+  ); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
 
   z-index: -1; /* 确保背景在内容后面 */
 }
 
-.sale-models-card-container {
+.sale-models-card {
   --border-width: 1.5px;
   --border-radius: 15px;
   --border-color: var(--color-gradient-green-to-blue);
@@ -289,7 +400,7 @@
   position: relative;
 }
 
-.sale-models-card-container:after {
+.sale-models-card:after {
   content: "";
   position: absolute;
   left: var(--left-position);
@@ -307,18 +418,32 @@
   -webkit-mask-clip: content-box, padding-box;
   -webkit-mask-composite: destination-out;
 }
-.sale-models-card-container:before {
+.sale-models-card:before {
   content: "";
   position: absolute;
-  left: var(--left-position);
+  left: var (--left-position);
   top: var(--top-position);
   width: var(--width-size);
   height: var(--height-size);
-  background: radial-gradient(circle, var(--color-super-light-blue) 0%, transparent 100%); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
+  background: radial-gradient(
+    circle,
+    var(--color-super-light-blue) 0%,
+    transparent 100%
+  ); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
 
   z-index: -1; /* 确保背景在内容后面 */
 }
 
+@media (max-width: 640px) {
+  .sale-models-card {
+    padding: 20px;
+  }
+  .sale-models-container {
+    padding: 10px;
+  }
+}
+
+.providing-card-title,
 .sale-models-card-title {
   color: white;
   font-size: 1.5rem;
@@ -327,7 +452,7 @@
   font-weight: 520;
   margin-top: 10px;
 }
-
+.providing-card-content,
 .sale-models-card-content {
   color: white;
   font-size: 0.8rem;
@@ -335,6 +460,22 @@
 }
 
 /* providing Section */
+
+.spotlight-container {
+  display: grid;
+  max-width: 48rem;
+  margin: 0 auto;
+  gap: 6px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-items: center;
+}
+@media (max-width: 640px) {
+  .spotlight-container {
+    grid-template-columns: 1fr;
+    gap: calc(var(--providing-icon-height) * 1.5); /* 增加内部元素的上下间隔 */
+  }
+}
+
 .providing-card {
   flex: 1;
   display: flex;
@@ -343,19 +484,10 @@
   padding: 0.5rem;
 }
 
-.providing-card-title {
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-weight: 520;
-}
-
-.providing-card-content {
-  color: white;
-  font-size: 0.8rem;
-  font-weight: 350;
-}
+/*
+.providing-card-title will use sale-models-card-title 
+.providing-card-content will use sale-models-card-content
+*/
 
 .providing-container {
   --border-radius: 15px;
@@ -365,33 +497,45 @@
   padding: 0 10px;
   position: relative;
 }
-
+@media (max-width: 640px) {
+  .providing-container {
+    height: 150px; /* 设置固定高度 */
+    margin: 0 auto; /* 居中 */
+    width: 100%;
+    max-width: 312px;
+  }
+  .providing-card {
+    width: 100%;
+  }
+  .providing-card-content {
+    width: 100%;
+  }
+}
 .providing-container:hover {
   background-size: 100% 150%;
 }
 
 /* why-choose Section */
-
+.storys-title,
 .why-choose-title {
   background: var(--color-gradient-green-to-cyan);
   background-size: 200% auto;
   background-clip: text;
   color: transparent;
   font-family: sans-serif;
-  font-size: 3.5rem;
   font-weight: 400;
   animation: gradient 6s linear infinite;
+  font-size: 2.25rem;
   margin-bottom: 2rem;
 }
-
 
 .why-choose-card {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom: 2px solid var(--color-blue-500); 
-  margin-left: 1rem; 
+  margin-left: 1rem;
+  height: var(--why-choose-icon-size);
 }
 
 .why-choose-card-title {
@@ -409,10 +553,208 @@
   font-size: 0.8rem;
   line-height: 2;
   padding-bottom: 0.25rem; /* pt-1 equivalent in CSS */
-
+  border-bottom: 2px solid var(--color-blue-500);
 }
 
+@media (max-width: 640px) {
+  .why-choose-card {
+    height: auto; /* 设置自适应高度 */
+  }
+  .why-choose-card-title {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+  .why-choose-card-content {
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
+}
 
+/*story section */
+
+#main-slider-container {
+  width: 100%;
+  height: 305px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#slider {
+  width: calc(100% - var(--slider-padding)); /* 减去两个箭头的宽度 */
+  height: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  padding-left: var(--arrow-width); /* 左侧箭头的宽度 */
+  padding-right: var(--arrow-width); /* 右侧箭头的宽度 */
+  box-sizing: border-box; 
+}
+
+#slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-icon.left,
+.slider-icon.right {
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.5;
+  cursor: pointer;
+  color: var(--color-green-400);
+  width: var(--arrow-width);
+  height: var(--arrow-width);
+  z-index:3;
+}
+
+.slider-icon.left {
+  left: 0;
+}
+
+.slider-icon.right {
+  right: 0;
+}
+
+.slider-icon.left:hover,
+.slider-icon.right:hover {
+  opacity: 1;
+}
+
+/* 添加透明的背景触控区域 */
+#left-touch-area {
+  position: absolute;
+  left: 0;
+  width: var(--arrow-width);
+  height: 100%;
+  background: transparent;
+  z-index: 3;
+}
+
+.slider-card {
+  width: 275px;
+  height: 280px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+
+  --border-width: 1.5px;
+  --border-radius: 15px;
+  --border-color: var(--color-gradient-green-to-blue);
+  --left-position: 0%;
+  --top-position: 0;
+  --width-size: 100%;
+  --height-size: 100%;
+  padding: 10px;
+  position: relative;
+}
+
+.slider-card:after {
+  content: "";
+  position: absolute;
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background: var(--border-color);
+
+  mask-image: var(--mask-bg), var(--mask-bg);
+  mask-clip: content-box, padding-box;
+  mask-composite: exclude;
+  -webkit-mask-image: var(--mask-bg), var(--mask-bg);
+  -webkit-mask-clip: content-box, padding-box;
+  -webkit-mask-composite: destination-out;
+}
+.slider-card:before {
+  content: "";
+  position: absolute;
+  left: var (--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  background: radial-gradient(
+    circle,
+    var(--color-super-light-blue) 0%,
+    transparent 100%
+  ); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
+
+  z-index: -1; /* 确保背景在内容后面 */
+}
+
+.slider-card-image,
+.slider-card-title,
+.slider-card-description {
+  margin: 10px 0px 5px 10px;
+}
+.slider-card-title {
+  color: var(--color-light-cyan);
+  font-weight: 500;
+  flex-grow: 1;
+  font-size: 1.25rem;
+}
+.slider-card-stats {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2;
+  transform: translateX(-1px);
+  font-size: 0.7rem;
+  opacity: 0.7;
+  color: var(--color-light-gray);
+}
+.slider-card-figure {
+  background: var(--color-gradient-green-to-cyan);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  -webkit-background-clip: text;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.slider-card-description  {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 350;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  height: 128px;
+  overflow: hidden;
+}
+.slider-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+}
+.slider-card-image {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(240 240 240 / 80%);
+  border-radius: 50%;
+}
+.view-image-container {
+  position: absolute;
+  bottom: -10px; /* 向下偏移 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.view-image {
+  height: 30px; /* 根据需要调整 */
+
+}
+.curated-image-container {
+  right: 0;
+  position: relative;
+}
 
 /* partner Section */
 .partner-container {
@@ -424,7 +766,19 @@
   --width-size: 100%;
   --height-size: 100%;
   padding: 30px;
+  gap: 1rem; /* space-x-4 equivalent */
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 840px) {
+  .partner-container {
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+  }
 }
 
 .partner-container:after {
@@ -453,7 +807,40 @@
   top: var(--top-position);
   width: var(--width-size);
   height: var(--height-size);
-  background: radial-gradient(circle, var(--color-super-light-blue) 0%, var(--color-super-light-blue) 30%, transparent 100%); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
+  background: radial-gradient(
+    circle,
+    var(--color-super-light-blue) 0%,
+    var(--color-super-light-blue) 30%,
+    transparent 100%
+  ); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
 
   z-index: -1; /* 确保背景在内容后面 */
+}
+
+/*global media*/
+@media (min-width: 641px) and (max-width: 1023px) {
+  .why-choose-card-title,
+  .providing-card-title,
+  .sale-models-card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.375rem;
+  }
+  .providing-card-content,
+  .sale-models-card-content {
+    font-size: 0.75rem;
+    font-weight: 275;
+  }
+}
+@media (max-width: 640px) {
+  .why-choose-card-title,
+  .providing-card-title,
+  .sale-models-card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  .providing-card-content,
+  .sale-models-card-content {
+    font-size: 0.7rem;
+    font-weight: 250;
+  }
 }

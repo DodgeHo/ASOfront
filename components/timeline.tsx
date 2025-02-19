@@ -5,7 +5,7 @@ export default function Timeline() {
         <div className="pb-12 md:pb-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-            <div className="animate-gradient-text pb-4 nacelle-text14 ">
+            <div className="animate-gradient-text pb-4 nacelle-text24 ">
               Bringing the world's ideas to life
             </div>
             <p className="text-lg text-indigo-200/65">

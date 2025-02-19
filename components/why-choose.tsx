@@ -4,7 +4,6 @@ import type { StaticImageData } from "next/image";
 import Spotlight from "@/components/spotlight";
 import homePageConfig from "@/configs/homePageConfig";
 
-const IMAGE_SIZE = 90;
 const COLOR_BLUE_700 = "#0A77D8";
 const COLOR_GREEN_600 = "#05BE9D";
 
@@ -25,20 +24,19 @@ export function WhyChooseCard({
 }: WhyChooseCardProps) {
   return (
     <a className="group-card" href="#0">
-      <div className="flex items-center">
+      <div className="flex ">
         <div
           style={{
             position: "relative",
-            height: `${IMAGE_SIZE}px`,
-            width: `${IMAGE_SIZE}px`,
+            height: "var(--why-choose-icon-size)",
+            width: "var(--why-choose-icon-size)",
             overflow: "hidden",
+            top: "0",
           }}
         >
           <Image
             className=""
             src={imageSrc}
-            width={IMAGE_SIZE}
-            height={IMAGE_SIZE}
             alt={imageAlt}
             style={{
               position: "absolute",
@@ -46,20 +44,21 @@ export function WhyChooseCard({
               left: "0",
               transform: "translateX(0)",
               objectFit: "cover",
+              width: "var(--why-choose-icon-size)",
             }}
           />
         </div>
-        <div className="why-choose-card" style={{ height: `${IMAGE_SIZE}px` }}>
-            <div
+        <div className="why-choose-card">
+          <div
             className="why-choose-card-title"
             style={{
               background: backgroundColor,
               WebkitBackgroundClip: "text",
               color: "transparent",
             }}
-            >
+          >
             {title}
-            </div>
+          </div>
           <p className="why-choose-card-content">{content}</p>
         </div>
       </div>
@@ -106,11 +105,11 @@ export default function WhyChooseless() {
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 ">
         <div className="mx-auto max-w-3xl py-12 text-center ">
-          <div className="why-choose-title" style={{ fontSize: "2.25rem" }}>
-            Why Choose ASO
+          <div className="why-choose-title">
+            {homePageConfig.whyChooseTitle}
           </div>
         </div>
-        <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-3xl grid-cols-1">
+        <Spotlight className="group mx-auto grid max-w-sm items-start gap-8 md:gap-6 sm:max-w-3xl grid-cols-1">
           {cards.map((card, index) => (
             <WhyChooseCard
               key={card.title}

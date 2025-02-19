@@ -4,8 +4,6 @@ import Spotlight from "@/components/spotlight";
 import homePageConfig from "@/configs/homePageConfig";
 import CirclePlate from "@/public/images/providing-circle-plate.png";
 
-const IMAGE_HEIGHT = 40; // 提取的常量
-
 interface ProvidingCardProps {
   imageSrc: StaticImageData;
   imageAlt: string;
@@ -32,19 +30,23 @@ export function ProvidingCard({
       >
         {/* Image */}
         <div
-          style={{ position: "relative", height: `${IMAGE_HEIGHT}px`, overflow: "visible" }}
+          style={{
+            position: "relative",
+            height: "var(--providing-icon-height)",
+            overflow: "visible",
+          }}
         >
           <Image
             className=""
             src={imageSrc}
-            width={80}
-            height={80}
             alt={imageAlt}
             style={{
               position: "absolute",
-              top: `-${IMAGE_HEIGHT}px`,
+              top: "calc(-0.75 * var(--providing-icon-height))",
               left: "50%",
               transform: "translateX(-50%)",
+              height: "calc(var(--providing-icon-height) * 2)",
+              width: "calc(var(--providing-icon-height) * 2)",
             }}
           />
         </div>
@@ -75,14 +77,12 @@ export default function Providing() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 ">
         {/* Section header */}
         <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-          <div className="animate-gradient-text pb-4 nacelle-text14 ">
-            Providing Opportunities at Every Stage
+          <div className="animate-gradient-text pb-4 nacelle-text24 ">
+            {homePageConfig.providingTitle}
           </div>
         </div>
         {/* Spotlight items */}
-        <Spotlight
-          className={`group mx-auto grid max-w-sm items-start gap-6 lg:max-w-3xl lg:grid-cols-${homePageConfig.providingCards.length}`}
-        >
+        <Spotlight className="spotlight-container">
           {homePageConfig.providingCards.map((card, index) => (
             <ProvidingCard
               key={card.title}

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import homePageConfig from "@/configs/homePageConfig";
-const IMAGE_SIZE = 60;
 
 interface SaleModelItemProps {
   imageSrc: StaticImageData;
@@ -12,9 +11,13 @@ interface SaleModelItemProps {
 
 function SaleModelItem({ imageSrc, imageAlt, title, content }: SaleModelItemProps) {
   return (
-    <article className="sale-models-card-container">
-      <div className="flex items-center mb-3">
-        <Image src={imageSrc} alt={imageAlt} width={IMAGE_SIZE} height={IMAGE_SIZE} />
+    <article className="sale-models-card">
+      <div className="flex items-center mb-3" >
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          style={{ width: "var(--sale-model-icon-size)", }}
+        />
         <div className="sale-models-card-title ml-3 flex items-center">{title}</div>
       </div>
       <p className="sale-models-card-content">{content}</p>
@@ -38,16 +41,16 @@ export default function SaleModels() {
         <div className="sale-models-container">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
-            <div className="animate-gradient-text nacelle-text14 ">
-              Token Sale Models
+            <div className="animate-gradient-text nacelle-text24 ">
+              {homePageConfig.saleModelsTitle}
             </div>
             <p className="third-title-description">
-              Multiple Token Sale Models to Choose From
+              {homePageConfig.saleModelsDescription}
             </p>
           </div>
 
           {/* Items */}
-          <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-2">
+          <div className="mx-auto sale-models-grid">
             {homePageConfig.salesModelCards.map((card) => (
               <SaleModelItem
                 key={card.title}

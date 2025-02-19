@@ -3,8 +3,6 @@ import type { StaticImageData } from "next/image";
 import Spotlight from "@/components/spotlight";
 import homePageConfig from "@/configs/homePageConfig";
 
-const IMAGE_SIZE = 100;
-
 interface PermissionCardProps {
   imageSrc: StaticImageData;
   imageAlt: string;
@@ -24,21 +22,20 @@ export function PermissionCard({
         <div
           style={{
             position: "relative",
-            height: `${IMAGE_SIZE}px`,
-            width: `${IMAGE_SIZE}px`,
+            height: "var(--permission-icon-size)",
+            width: "var(--permission-icon-size)",
           }}
         >
           <Image
             className=""
             src={imageSrc}
-            width={IMAGE_SIZE}
-            height={IMAGE_SIZE}
             alt={imageAlt}
             style={{
               position: "absolute",
               top: "0",
               left: "0",
               transform: "translateX(0)",
+              width: "var(--permission-icon-size)",
             }}
           />
         </div>
@@ -67,15 +64,14 @@ export default function Permissionless() {
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 pb-12 md:pb-20">
         <div className="mx-auto max-w-3xl pb-12 text-center ">
-          <div className="animate-gradient-text pb-4 nacelle-text14 ">
-            Permissionless and Partnered Sales for Every Need
+          <div className="animate-gradient-text pb-4 nacelle-text24 ">
+            {homePageConfig.permissionlessTitle}
           </div>
           <p className="third-title-description">
-            ASO pum offers two flexible sale options, designed to fit the needs
-            of both projects and their backers
+            {homePageConfig.permissionlessDescription}
           </p>
         </div>
-        <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-3xl grid-cols-1">
+        <Spotlight className="group mx-auto grid items-start gap-6 max-w-3xl grid-cols-1">
           {homePageConfig.perimissionCards.map((card, index) => (
             <PermissionCard
               key={card.title}

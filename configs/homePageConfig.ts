@@ -1,12 +1,4 @@
-type Slide = {
-  image: string;
-  title: string;
-  description: string;
-  href: string;
-  fundsRaised: string;
-  percentSold: string;
-  currentFDVMC: string;
-};
+import { Slide, Card } from './HomePageTypes';
 
 type Config = {
   // Hero Section
@@ -15,41 +7,41 @@ type Config = {
   heroSecondText: string;
   heroThirdText: string;
   heroLowerButtonText: string;
+  // Background illustration
   illustrationTopPosition: string;
   illustrationLightPosition: string;
   illustrationBottomPosition: string;
-  providingCards: {
-    imageSrcPath: string;
-    title: string;
-    content: string;
-  }[];
-  perimissionCards: {
-    imageSrcPath: string;
-    title: string;
-    content: string;
-  }[];
-  salesModelCards: {
-    imageSrcPath: string;
-    title: string;
-    content: string;
-  }[];
-  whyChooseCards: {
-    imageSrcPath: string;
-    title: string;
-    content: string;
-  }[];
-  // New fields for Permissionless section
+  // LightBox Stats
+  lightBoxStats: {
+    participants: string;
+    fundsRaised: string;
+    volumeTraded: string;
+    labels: {
+      participants: string;
+      fundsRaised: string;
+      volumeTraded: string;
+    };
+  };
+  // Permissionless section
   permissionlessTitle: string;
   permissionlessDescription: string;
-  // New fields for Providing section
-  providingTitle: string;
-  // New fields for Sale Models section
+  perimissionCards: Card[];
+  // Sales model section
   saleModelsTitle: string;
   saleModelsDescription: string;
-  // New fields for Why Choose section
+  salesModelCards: Card[];
+  // Providing section
+  providingTitle: string;
+  providingCards: Card[];
+  // Why Choose section
   whyChooseTitle: string;
+  whyChooseCards: Card[];
+  // Storys section
   storysTitle: string;
   storySlides: Slide[];
+  // Partners section
+  partnerTitle: string;
+  partnersImg: Card[];
 };
 
 /* 全局的主题属性包括颜色，请在文件ASOfront/app/css/style.css中的:root编辑*/
@@ -63,29 +55,25 @@ const homePageConfig: Config = {
   heroThirdText:
     "Whether you're a project seeking early-stage funding or a participant eager to back the next big idea, Aso connects you, offering transparent tools for capital formation and discovering new communities.",
   heroLowerButtonText: "Explore Sales",
+  // Background illustration
   illustrationTopPosition: "800px",
   illustrationLightPosition: "800px",
   illustrationBottomPosition: "1200px",
-  providingCards: [
-    {
-      imageSrcPath: "public/images/providing-seed.png",
-      title: "Seed Round",
-      content:
-        "For early-stage projects with longer vesting schedules, ideal for backers supporting emerging ideas.",
+  // lightBox Stats
+  lightBoxStats: {
+    participants: "100K",
+    fundsRaised: "$3",
+    volumeTraded: "$1.5",
+    labels: {
+      participants: "Total Participants",
+      fundsRaised: "Funds Raised",
+      volumeTraded: "Volume Traded",
     },
-    {
-      imageSrcPath: "public/images/providing-key.png",
-      title: "Private Sale",
-      content:
-        "Suited for established projects with shorter vesting schedules offering early access for backers.",
-    },
-    {
-      imageSrcPath: "public/images/providing-community.png",
-      title: "Public Sale",
-      content:
-        "Open to the community near TGE, providing broad exposure and participation opportunities before official release.",
-    },
-  ],
+  },
+  // Permissionless section
+  permissionlessTitle: "Permissionless and Partnered Sales for Every Need",
+  permissionlessDescription:
+    "ASO pum offers two flexible sale options, designed to fit the needs of both projects and their backers",
   perimissionCards: [
     {
       imageSrcPath: "public/images/permission-community.png",
@@ -100,6 +88,10 @@ const homePageConfig: Config = {
         "Supported by Fjord or trusted third-party launch partners, these sales are backed by recognized entities and individuals within the web3 community.",
     },
   ],
+
+  // Sales model section
+  saleModelsTitle: "Token Sale Models",
+  saleModelsDescription: "Multiple Token Sale Models to Choose From",
   salesModelCards: [
     {
       imageSrcPath: "public/images/sales-lbp.png",
@@ -126,6 +118,32 @@ const homePageConfig: Config = {
         "A simple, straightforward sale model with a set price per token, perfect for projects that prefer price certainty. Coming soon.",
     },
   ],
+
+  // Providing section
+  providingTitle: "Providing Opportunities at Every Stage",
+  providingCards: [
+    {
+      imageSrcPath: "public/images/providing-seed.png",
+      title: "Seed Round",
+      content:
+        "For early-stage projects with longer vesting schedules, ideal for backers supporting emerging ideas.",
+    },
+    {
+      imageSrcPath: "public/images/providing-key.png",
+      title: "Private Sale",
+      content:
+        "Suited for established projects with shorter vesting schedules offering early access for backers.",
+    },
+    {
+      imageSrcPath: "public/images/providing-community.png",
+      title: "Public Sale",
+      content:
+        "Open to the community near TGE, providing broad exposure and participation opportunities before official release.",
+    },
+  ],
+
+  // Why Choose section
+  whyChooseTitle: "Why Choose ASO",
   whyChooseCards: [
     {
       imageSrcPath: "public/images/why-choose-arrow.png",
@@ -146,18 +164,12 @@ const homePageConfig: Config = {
         "With a successful history of launching projects and raising capital, AsO is a trusted name in the world of token sales",
     },
   ],
-  permissionlessTitle: "Permissionless and Partnered Sales for Every Need",
-  permissionlessDescription: "ASO pum offers two flexible sale options, designed to fit the needs of both projects and their backers",
-  providingTitle: "Providing Opportunities at Every Stage",
-  saleModelsTitle: "Token Sale Models",
-  saleModelsDescription: "Multiple Token Sale Models to Choose From",
-  whyChooseTitle: "Why Choose ASO",
-  storysTitle:"Previous Success Stories",
 
-
+  // Storys section
+  storysTitle: "Previous Success Stories",
   storySlides: [
     {
-      image: "public/images/Autonolas.png",
+      imageSrcPath: "public/images/Autonolas.png",
       title: "Autonolas 1",
       description: "Description for slide 1",
       href: "#0",
@@ -166,7 +178,7 @@ const homePageConfig: Config = {
       currentFDVMC: "$1.21bn",
     },
     {
-      image: "public/images/Autonolas.png",
+      imageSrcPath: "public/images/Autonolas.png",
       title: "Autonolas 2",
       description: "Description for slide 2",
       href: "#0",
@@ -175,16 +187,17 @@ const homePageConfig: Config = {
       currentFDVMC: "$1.22bn",
     },
     {
-      image: "public/images/Autonolas.png",
+      imageSrcPath: "public/images/Autonolas.png",
       title: "Autonolas 3",
-      description: "OLAS coordinates the cutting-edge Autonolas network, a unified network of off-chain services-like automation,oracles,and co-owned A1.",
+      description:
+        "OLAS coordinates the cutting-edge Autonolas network, a unified network of off-chain services-like automation,oracles,and co-owned A1.",
       href: "#0",
       fundsRaised: "$543k",
       percentSold: "99%",
       currentFDVMC: "$1.23bn",
     },
     {
-      image: "public/images/Autonolas.png",
+      imageSrcPath: "public/images/Autonolas.png",
       title: "Slide 4",
       description: "Description for slide 4",
       href: "#0",
@@ -193,7 +206,7 @@ const homePageConfig: Config = {
       currentFDVMC: "$1.24bn",
     },
     {
-      image: "public/images/Autonolas.png",
+      imageSrcPath: "public/images/Autonolas.png",
       title: "Slide 5",
       description: "Description for slide 5",
       href: "#0",
@@ -202,13 +215,43 @@ const homePageConfig: Config = {
       currentFDVMC: "$1.25bn",
     },
     {
-      image: "public/images/Autonolas.png",
+      imageSrcPath: "public/images/Autonolas.png",
       title: "Slide 6",
       description: "Description for slide 6",
       href: "#0",
       fundsRaised: "$546k",
       percentSold: "99%",
       currentFDVMC: "$1.26bn",
+    },
+  ],
+
+  // Partners section
+  partnerTitle: "Our Partners & Backers",
+  partnersImg: [
+    {
+      imageSrcPath:  "public/images/partners_logo1.png",
+      title: "Partner 1",
+      content:"",
+    },
+    {
+      imageSrcPath: "/public/images/partners_logo2.png",
+      title: "Partner 2",
+      content:"",
+    },
+    {
+      imageSrcPath: "/public/images/partners_logo3.png",
+      title: "Partner 3",
+      content:"",
+    },
+    {
+      imageSrcPath: "/public/images/partners_logo4.png",
+      title: "Partner 4",
+      content:"",
+    },
+    {
+      imageSrcPath:"/public/images/partners_logo5.png",
+      title: "Partner 5",
+      content:"",
     },
   ],
 };

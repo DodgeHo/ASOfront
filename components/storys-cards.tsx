@@ -6,16 +6,7 @@ import Image from "next/image";
 import type { StaticImageData } from "next/image";
 
 import { useEffect } from "react";
-
-interface Slide {
-  image: string;
-  title: string;
-  description: string;
-  href: string;
-  fundsRaised: string;
-  percentSold: string;
-  currentFDVMC: string;
-}
+import type { Slide } from "@/configs/HomePageTypes";
 
 interface StoryCardsProps {
   slides: Slide[];
@@ -64,7 +55,7 @@ const StoryCards = (props: StoryCardsProps) => {
       <FaChevronLeft className="slider-icon left" onClick={slideLeft} />
       <div id="slider">
         {props.slides.map((slide, index) => {
-          const imagePath = slide.image.split("/").pop();
+          const imagePath = slide.imageSrcPath.split("/").pop();
           const imageSrc = require(`../public/images/${imagePath}`).default;
           return (
             <a className="slider-card" key={index} href={slide.href}>

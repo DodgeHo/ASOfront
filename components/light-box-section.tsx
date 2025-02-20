@@ -23,21 +23,30 @@ export default function LightBoxSection() {
 
         <div className="lightbox-figure">
           <div className="third-width-center">
-            100K<sup>+</sup>
-          </div>
-          <div className="third-width-center">
-            $3<sub>B</sub>
+            {homePageConfig.lightBoxStats.participants}
             <sup>+</sup>
           </div>
           <div className="third-width-center">
-            $1.5<sub>B</sub>
+            {homePageConfig.lightBoxStats.fundsRaised}
+            <sub>B</sub>
+            <sup>+</sup>
+          </div>
+          <div className="third-width-center">
+            {homePageConfig.lightBoxStats.volumeTraded}
+            <sub>B</sub>
             <sup>+</sup>
           </div>
         </div>
         <div className="lightbox-stats">
-          <div className="third-width-center">Total Participants</div>
-          <div className="third-width-center">Funds Raised</div>
-          <div className="third-width-center">Volume Traded</div>
+          <div className="third-width-center">
+            {homePageConfig.lightBoxStats.labels.participants}
+          </div>
+          <div className="third-width-center">
+            {homePageConfig.lightBoxStats.labels.fundsRaised}
+          </div>
+          <div className="third-width-center">
+            {homePageConfig.lightBoxStats.labels.volumeTraded}
+          </div>
         </div>
         <Image
           className="h-auto mt-25"

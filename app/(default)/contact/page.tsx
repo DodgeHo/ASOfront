@@ -3,7 +3,7 @@ export const metadata = {
   description: "Page description",
 };
 
-import PageIllustration from "@/components/page-illustration";
+import PageIllustration from "@/components/homepage/page-illustration";
 import FooterSeparator from "@/components/footer-separator";
 
 export default function Contact() {

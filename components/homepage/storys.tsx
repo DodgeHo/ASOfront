@@ -1,7 +1,7 @@
 import Image from "next/image";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 import homePageConfig from "@/configs/homePageConfig";
-import StorysCards from "@/components/storys-cards";
+import StorysCards from "@/components/homepage/storys-cards";
 
 export default function Storys() {
   return (

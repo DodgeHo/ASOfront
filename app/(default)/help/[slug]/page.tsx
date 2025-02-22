@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getHelpPages } from "@/components/mdx/utils";
 import { notFound } from "next/navigation";
-import PageIllustration from "@/components/page-illustration";
+import PageIllustration from "@/components/homepage/page-illustration";
 import Sidebar from "./help-sidebar";
 import FooterSeparator from "@/components/footer-separator";
 import { CustomMDX } from "@/components/mdx/mdx";

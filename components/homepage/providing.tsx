@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Spotlight from "@/components/spotlight";
 import homePageConfig from "@/configs/homePageConfig";
-import CirclePlate from "@/public/images/providing-circle-plate.png";
+import CirclePlate from "@/public/images/homepage/providing-circle-plate.png";
 
 interface ProvidingCardProps {
   imageSrc: string;

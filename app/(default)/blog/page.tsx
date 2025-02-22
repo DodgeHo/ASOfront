@@ -1,6 +1,6 @@
 import { getBlogPosts } from "@/components/mdx/utils";
 import CategoryProvider from "./category-provider";
-import PageIllustration from "@/components/page-illustration";
+import PageIllustration from "@/components/homepage/page-illustration";
 import BlogFilters from "./filters";
 import PostItem from "@/app/(default)/blog/post-item";
 
@@ -9,7 +9,7 @@ export const metadata = {
   description: "Page description",
 };
 
-import Partners from "@/components/partners";
+import Partners from "@/components/homepage/partners";
 import Pagination from "./pagination";
 
 export default function Blog() {

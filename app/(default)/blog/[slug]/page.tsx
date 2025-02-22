@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { getBlogPosts } from "@/components/mdx/utils";
 import { notFound } from "next/navigation";
-import PageIllustration from "@/components/page-illustration";
+import PageIllustration from "@/components/homepage/page-illustration";
 import Image from "next/image";
 import { CustomMDX } from "@/components/mdx/mdx";
 import RelatedPosts from "./related-posts";
-import Partners from "@/components/partners";
+import Partners from "@/components/homepage/partners";
 
 export async function generateStaticParams() {
   const allBlogs = getBlogPosts();

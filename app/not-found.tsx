@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import NotFoundImage from "@/public/images/404.jpg";
-import PageIllustration from "@/components/page-illustration";
+import PageIllustration from "@/components/homepage/page-illustration";
 import FooterSeparator from "@/components/footer-separator";
 import Footer from "@/components/ui/footer";
 

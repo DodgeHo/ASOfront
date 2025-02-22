@@ -2,7 +2,7 @@
 :root {
   --permission-icon-size: 100px;
   --sale-model-icon-size: 60px;
-  --providing-icon-height: 40px;
+  --providing-icon-size: 40px;
   --why-choose-icon-size: 90px;
   --arrow-width: 40px;
   --slider-padding: calc(var(--arrow-width));
@@ -12,14 +12,14 @@
   :root {
     --permission-icon-size: 70px;
     --sale-model-icon-size: 48px;
-    --providing-icon-height: 34px;
+    --providing-icon-size: 34px;
   }
 }
 @media (max-width: 460px) {
   :root {
     --permission-icon-size: 60px;
     --sale-model-icon-size: 40px;
-    --providing-icon-height: 30px;
+    --providing-icon-size: 30px;
     --arrow-width: 20px;
 
   }
@@ -388,6 +388,12 @@
   z-index: -1; /* 确保背景在内容后面 */
 }
 
+.sale-model-icon-container {
+  position: relative;
+  width: var(--sale-model-icon-size);
+  height: var(--sale-model-icon-size);
+}
+
 .sale-models-card {
   --border-width: 1.5px;
   --border-radius: 15px;
@@ -472,7 +478,7 @@
 @media (max-width: 640px) {
   .spotlight-container {
     grid-template-columns: 1fr;
-    gap: calc(var(--providing-icon-height) * 1.5); /* 增加内部元素的上下间隔 */
+    gap: calc(var(--providing-icon-size) * 1.5); /* 增加内部元素的上下间隔 */
   }
 }
 
@@ -513,6 +519,12 @@
 }
 .providing-container:hover {
   background-size: 100% 150%;
+}
+
+.providing-icon-container {
+  position: relative;
+  width: calc(var(--providing-icon-size) * 2);
+  height: calc(var(--providing-icon-size) * 2);
 }
 
 /* why-choose Section */
@@ -769,7 +781,7 @@
   gap: 1rem; /* space-x-4 equivalent */
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
 }
 
@@ -815,6 +827,12 @@
   ); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
 
   z-index: -1; /* 确保背景在内容后面 */
+}
+
+.partner-icon-container{
+  position: relative;
+  height: 30px;
+  width: 100%;
 }
 
 /*global media*/

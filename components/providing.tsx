@@ -1,11 +1,10 @@
 import Image from "next/image";
-import type { StaticImageData } from "next/image";
 import Spotlight from "@/components/spotlight";
 import homePageConfig from "@/configs/homePageConfig";
 import CirclePlate from "@/public/images/providing-circle-plate.png";
 
 interface ProvidingCardProps {
-  imageSrc: StaticImageData;
+  imageSrc: string;
   imageAlt: string;
   title: string;
   content: string;
@@ -32,7 +31,8 @@ export function ProvidingCard({
         <div
           style={{
             position: "relative",
-            height: "var(--providing-icon-height)",
+            height: "calc(var(--providing-icon-size) * 2)",
+            top: "calc(-0.75 * var(--providing-icon-size))",
             overflow: "visible",
           }}
         >
@@ -40,18 +40,24 @@ export function ProvidingCard({
             className=""
             src={imageSrc}
             alt={imageAlt}
+            fill
             style={{
+              objectFit: "contain",
               position: "absolute",
-              top: "calc(-0.75 * var(--providing-icon-height))",
               left: "50%",
               transform: "translateX(-50%)",
-              height: "calc(var(--providing-icon-height) * 2)",
-              width: "calc(var(--providing-icon-height) * 2)",
             }}
           />
         </div>
         {/* Content */}
-        <div className="providing-card">
+        <div
+          className="providing-card"
+          style={{
+            position: "relative",
+            top: "calc(-0.75 * var(--providing-icon-size))",
+            overflow: "visible",
+          }}
+        >
           <div className="providing-card-title">{title}</div>
           <p className="providing-card-content">{content}</p>
         </div>
@@ -61,17 +67,6 @@ export function ProvidingCard({
 }
 
 export default function Providing() {
-  const images: { [key: string]: StaticImageData } =
-    homePageConfig.providingCards.reduce<{ [key: string]: StaticImageData }>(
-      (acc, card) => {
-        const imagePath = card.imageSrcPath.split("/").pop();
-        acc[card.imageSrcPath] =
-          require(`../public/images/${imagePath}`).default;
-        return acc;
-      },
-      {}
-    );
-
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 ">
@@ -86,7 +81,7 @@ export default function Providing() {
           {homePageConfig.providingCards.map((card, index) => (
             <ProvidingCard
               key={card.title}
-              imageSrc={images[card.imageSrcPath]}
+              imageSrc={card.imageSrcPath}
               title={card.title}
               imageAlt={card.title}
               content={card.content}

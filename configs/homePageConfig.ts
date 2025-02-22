@@ -76,13 +76,13 @@ const homePageConfig: Config = {
     "ASO pum offers two flexible sale options, designed to fit the needs of both projects and their backers",
   perimissionCards: [
     {
-      imageSrcPath: "public/images/homepage/permission-community.png",
+      imageSrcPath: "images/homepage/permission-community.png",
       title: "Community Sales",
       content:
         "Permissionless sales where any project can launch, Driven by community upvoting, these sales are open to a wide range of innovative projects seeking support.",
     },
     {
-      imageSrcPath: "public/images/homepage/permission-partner.png",
+      imageSrcPath: "images/homepage/permission-partner.png",
       title: "Partner Sales",
       content:
         "Supported by Fjord or trusted third-party launch partners, these sales are backed by recognized entities and individuals within the web3 community.",
@@ -94,25 +94,25 @@ const homePageConfig: Config = {
   saleModelsDescription: "Multiple Token Sale Models to Choose From",
   salesModelCards: [
     {
-      imageSrcPath: "public/images/homepage/sales-lbp.png",
+      imageSrcPath: "images/homepage/sales-lbp.png",
       title: "LBP Sales",
       content:
         "Liquidity Bootstrapping Pools (LBP) is a dynamic pricing model that allows market forces to determine the token price, ideal for projects seeking to discover their true market value.",
     },
     {
-      imageSrcPath: "public/images/homepage/sales-fixed.png",
+      imageSrcPath: "images/homepage/sales-fixed.png",
       title: "Fixed Price Sales",
       content:
         "Supported by Fjord or trusted third-party launch partners, these sales are backed by recognized entities and individuals within the web3 community.",
     },
     {
-      imageSrcPath: "public/images/homepage/sales-tiered.png",
+      imageSrcPath: "images/homepage/sales-tiered.png",
       title: "Tiered Sales",
       content:
         "A dynamic pricing model that allows market forces to determine the token price, ideal for projects seeking to discover their true market value.",
     },
     {
-      imageSrcPath: "public/images/homepage/sales-overflow.png",
+      imageSrcPath: "images/homepage/sales-overflow.png",
       title: "Overflow Sales",
       content:
         "A simple, straightforward sale model with a set price per token, perfect for projects that prefer price certainty. Coming soon.",
@@ -123,19 +123,19 @@ const homePageConfig: Config = {
   providingTitle: "Providing Opportunities at Every Stage",
   providingCards: [
     {
-      imageSrcPath: "public/images/homepage/providing-seed.png",
+      imageSrcPath: "images/homepage/providing-seed.png",
       title: "Seed Round",
       content:
         "For early-stage projects with longer vesting schedules, ideal for backers supporting emerging ideas.",
     },
     {
-      imageSrcPath: "public/images/homepage/providing-key.png",
+      imageSrcPath: "images/homepage/providing-key.png",
       title: "Private Sale",
       content:
         "Suited for established projects with shorter vesting schedules offering early access for backers.",
     },
     {
-      imageSrcPath: "public/images/homepage/providing-community.png",
+      imageSrcPath: "images/homepage/providing-community.png",
       title: "Public Sale",
       content:
         "Open to the community near TGE, providing broad exposure and participation opportunities before official release.",
@@ -146,19 +146,19 @@ const homePageConfig: Config = {
   whyChooseTitle: "Why Choose ASO",
   whyChooseCards: [
     {
-      imageSrcPath: "public/images/homepage/why-choose-arrow.png",
+      imageSrcPath: "images/homepage/why-choose-arrow.png",
       title: "Revolutionizing On-Chain Funding",
       content:
         "ASO delivers groundbreaking on-chain funding models that give projects and backers unprecedented transparency and control. From launch to growth, every step is streamlined.",
     },
     {
-      imageSrcPath: "public/images/homepage/why-choose-community.png",
+      imageSrcPath: "images/homepage/why-choose-community.png",
       title: "Empowering Direct Community Connections",
       content:
         "ASO enables projects to bypass traditional funding, connecting directly with backers for faster growth.Backers gain early access to innovative projects, fostering a shared journey from day one.",
     },
     {
-      imageSrcPath: "public/images/homepage/why-choose-company.png",
+      imageSrcPath: "images/homepage/why-choose-company.png",
       title: " A Trusted Name in Token Sales",
       content:
         "With a successful history of launching projects and raising capital, AsO is a trusted name in the world of token sales",
@@ -169,7 +169,7 @@ const homePageConfig: Config = {
   storysTitle: "Previous Success Stories",
   storySlides: [
     {
-      imageSrcPath: "public/images/homepage/Autonolas.png",
+      imageSrcPath: "images/homepage/Autonolas.png",
       title: "Autonolas 1",
       description: "Description for slide 1",
       href: "#0",
@@ -178,7 +178,7 @@ const homePageConfig: Config = {
       currentFDVMC: "$1.21bn",
     },
     {
-      imageSrcPath: "public/images/homepage/Autonolas.png",
+      imageSrcPath: "images/homepage/Autonolas.png",
       title: "Autonolas 2",
       description: "Description for slide 2",
       href: "#0",
@@ -187,7 +187,7 @@ const homePageConfig: Config = {
       currentFDVMC: "$1.22bn",
     },
     {
-      imageSrcPath: "public/images/homepage/Autonolas.png",
+      imageSrcPath: "images/homepage/Autonolas.png",
       title: "Autonolas 3",
       description:
         "OLAS coordinates the cutting-edge Autonolas network, a unified network of off-chain services-like automation,oracles,and co-owned A1.",
@@ -197,7 +197,7 @@ const homePageConfig: Config = {
       currentFDVMC: "$1.23bn",
     },
     {
-      imageSrcPath: "public/images/homepage/Autonolas.png",
+      imageSrcPath: "images/homepage/Autonolas.png",
       title: "Slide 4",
       description: "Description for slide 4",
       href: "#0",
@@ -206,7 +206,7 @@ const homePageConfig: Config = {
       currentFDVMC: "$1.24bn",
     },
     {
-      imageSrcPath: "public/images/homepage/Autonolas.png",
+      imageSrcPath: "images/homepage/Autonolas.png",
       title: "Slide 5",
       description: "Description for slide 5",
       href: "#0",
@@ -215,7 +215,7 @@ const homePageConfig: Config = {
       currentFDVMC: "$1.25bn",
     },
     {
-      imageSrcPath: "public/images/homepage/Autonolas.png",
+      imageSrcPath: "images/homepage/Autonolas.png",
       title: "Slide 6",
       description: "Description for slide 6",
       href: "#0",
@@ -229,27 +229,27 @@ const homePageConfig: Config = {
   partnerTitle: "Our Partners & Backers",
   partnersImg: [
     {
-      imageSrcPath:  "public/images/homepage/partners_logo1.png",
+      imageSrcPath:  "images/homepage/partners_logo1.png",
       title: "Partner 1",
       content:"",
     },
     {
-      imageSrcPath: "/public/images/homepage/partners_logo2.png",
+      imageSrcPath: "/images/homepage/partners_logo2.png",
       title: "Partner 2",
       content:"",
     },
     {
-      imageSrcPath: "/public/images/homepage/partners_logo3.png",
+      imageSrcPath: "/images/homepage/partners_logo3.png",
       title: "Partner 3",
       content:"",
     },
     {
-      imageSrcPath: "/public/images/homepage/partners_logo4.png",
+      imageSrcPath: "/images/homepage/partners_logo4.png",
       title: "Partner 4",
       content:"",
     },
     {
-      imageSrcPath:"/public/images/homepage/partners_logo5.png",
+      imageSrcPath:"/images/homepage/partners_logo5.png",
       title: "Partner 5",
       content:"",
     },

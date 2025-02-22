@@ -1,20 +1,7 @@
 import Image from "next/image";
 import homePageConfig from "@/configs/homePageConfig";
-import type { StaticImageData } from "next/image";
 
 export default function Partners() {
-  const imageHeight = 30;
-  const images: { [key: string]: StaticImageData } =
-    homePageConfig.partnersImg.reduce<{ [key: string]: StaticImageData }>(
-      (acc, card) => {
-        const imagePath = card.imageSrcPath.split("/").pop();
-        acc[card.imageSrcPath] =
-          require(`../public/images/${imagePath}`).default;
-        return acc;
-      },
-      {}
-    );
-
   return (
     <section className="relative overflow-hidden">
       <div className="max-w6xl mx-auto px-4 sm:px-6">
@@ -25,16 +12,18 @@ export default function Partners() {
             </div>
             <div className="partner-container">
               {homePageConfig.partnersImg.map((partner, index) => {
-                const image = images[partner.imageSrcPath];
-                const aspectRatio = image.width / image.height;
                 return (
-                  <Image
-                    key={index}
-                    src={image}
-                    alt={partner.title}
-                    height={imageHeight}
-                    width={imageHeight * aspectRatio}
-                  />
+                  <div className="partner-icon-container"  key={index}>
+                    <Image
+                      src={partner.imageSrcPath}
+                      alt={partner.title}
+                      
+                      fill
+                      style={{
+                        objectFit:"contain",
+                      }}
+                    />
+                  </div>
                 );
               })}
             </div>

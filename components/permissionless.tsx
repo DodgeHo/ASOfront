@@ -1,10 +1,9 @@
 import Image from "next/image";
-import type { StaticImageData } from "next/image";
 import Spotlight from "@/components/spotlight";
 import homePageConfig from "@/configs/homePageConfig";
 
 interface PermissionCardProps {
-  imageSrc: StaticImageData;
+  imageSrc: string;
   imageAlt: string;
   title: string;
   content: string;
@@ -27,15 +26,16 @@ export function PermissionCard({
           }}
         >
           <Image
-            className=""
+            className="permission-icon"
             src={imageSrc}
             alt={imageAlt}
+            fill
             style={{
+              objectFit: "contain",
               position: "absolute",
               top: "0",
               left: "0",
               transform: "translateX(0)",
-              width: "var(--permission-icon-size)",
             }}
           />
         </div>
@@ -49,17 +49,6 @@ export function PermissionCard({
 }
 
 export default function Permissionless() {
-  const images: { [key: string]: StaticImageData } =
-    homePageConfig.perimissionCards.reduce<{ [key: string]: StaticImageData }>(
-      (acc, card) => {
-        const imagePath = card.imageSrcPath.split("/").pop();
-        acc[card.imageSrcPath] =
-          require(`../public/images/${imagePath}`).default;
-        return acc;
-      },
-      {}
-    );
-
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 pb-12 md:pb-20">
@@ -75,7 +64,7 @@ export default function Permissionless() {
           {homePageConfig.perimissionCards.map((card, index) => (
             <PermissionCard
               key={card.title}
-              imageSrc={images[card.imageSrcPath]}
+              imageSrc={card.imageSrcPath}
               title={card.title}
               imageAlt={card.title}
               content={card.content}

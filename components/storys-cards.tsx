@@ -3,6 +3,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import CuratedImage from "@/public/images/homepage/Curated.png";
 import ViewImage from "@/public/images/homepage/View.png";
 import Image from "next/image";
+
 import { useEffect } from "react";
 import type { Slide } from "@/configs/HomePageTypes";
 
@@ -53,13 +54,12 @@ const StoryCards = (props: StoryCardsProps) => {
       <FaChevronLeft className="slider-icon left" onClick={slideLeft} />
       <div id="slider">
         {props.slides.map((slide, index) => {
-          const imageSrc = require(`/${slide.imageSrcPath}`).default;
           return (
             <a className="slider-card" key={index} href={slide.href}>
               <div className="slider-card-header">
                 <Image
                   className="slider-card-image"
-                  src={imageSrc}
+                  src={slide.imageSrcPath}
                   alt={slide.title}
                   width={30}
                   height={30}

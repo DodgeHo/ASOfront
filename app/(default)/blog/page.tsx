@@ -24,7 +24,7 @@ export default function Blog() {
 
   return (
     <>
-      <PageIllustration multiple />
+      <PageIllustration  />
       <section>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {/* Hero content */}

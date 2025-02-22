@@ -47,7 +47,7 @@ export default async function SinglePost(
 
   return (
     <>
-      <PageIllustration multiple />
+      <PageIllustration  />
       <section>
         <div className="px-4 sm:px-6">
           <div className="py-12 md:py-20">

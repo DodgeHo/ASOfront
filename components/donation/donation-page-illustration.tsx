@@ -1,15 +1,13 @@
 import Image from "next/image";
+import Banner from "@/public/images/donation/banner.png";
 import Background from "@/public/images/background.png";
-import Banner from "@/public/images/homepage/banner.png";
-import homePageConfig from "@/configs/homePageConfig";
-
-export default function PageIllustration() {
+import donationPageConfig from "@/configs/donationPageConfig";
+export default function DonationPageIllustration() {
   return (
     <>
       <div
         className="pointer-events-none absolute top-0 -z-10 w-full"
         aria-hidden="true"
-        style={{ height: homePageConfig.illustrationTopPosition }}
       >
         <Image
           className="w-full h-full object-cover object-center"
@@ -19,8 +17,8 @@ export default function PageIllustration() {
       </div>
 
       <div
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 w-full -translate-x-1/2 opacity-50"
-        style={{ top: homePageConfig.illustrationBottomPosition }}
+        className="pointer-events-none absolute left-1/2 top-0 -z-11 w-full -translate-x-1/2 "
+        style={{ top: donationPageConfig.illustrationBottomPosition }}
         aria-hidden="true"
       >
         <Image
@@ -29,6 +27,7 @@ export default function PageIllustration() {
           alt="Background"
         />
       </div>
+
     </>
   );
 }

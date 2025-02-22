@@ -9,7 +9,7 @@ import FooterSeparator from "@/components/footer-separator";
 export default function Contact() {
   return (
     <>
-      <PageIllustration multiple />
+      <PageIllustration  />
       <section>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="py-12 md:py-20">

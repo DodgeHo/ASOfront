@@ -1,0 +1,78 @@
+/* lightbox Section */
+.lightbox-content {
+  max-width: 52rem;
+  width:100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.lightbox-stats {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 4rem;
+  line-height: 2;
+  transform: translateX(-10px);
+}
+.lightbox-figure {
+  background: var(--color-gradient-green-to-cyan);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  -webkit-background-clip: text;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.lightbox-figure sub {
+  background: var(--color-gradient-green-to-cyan);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  font-family: inherit;
+  animation: inherit;
+  font-size: 50%;
+  vertical-align: middle;
+}
+.lightbox-figure sup {
+  background: var(--color-gradient-green-to-cyan);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  font-family: inherit;
+  animation: inherit;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+.lightbox-content div {
+  line-height: 0.9;
+}
+.third-width-center {
+  flex: 1;
+  width: 33.33%;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .lightbox-figure {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .lightbox-stats {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 460px) {
+  .lightbox-figure {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .lightbox-stats {
+    font-size: 50%;
+  }
+}

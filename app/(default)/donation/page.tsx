@@ -1,17 +1,20 @@
 export const metadata = {
-  title: "Features - Open PRO",
+  title: "Donation - ASO",
   description: "Page description",
 };
 
-import PageIllustration from "@/components/homepage/page-illustration";
+import DonationPageIllustration from "@/components/donation/donation-page-illustration";
+import DonationLightBoxSection from "@/components/donation/donation-light-box-section";
 import Image from "next/image";
+import Hero from "@/components/homepage/hero-home";
 
 import FooterSeparator from "@/components/footer-separator";
 
 export default function Newsletter() {
   return (
     <>
-      <PageIllustration multiple />
+      <DonationPageIllustration  />
+      <DonationLightBoxSection />
       <section>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="py-12 md:py-20">
@@ -62,7 +65,6 @@ export default function Newsletter() {
           </div>
         </div>
       </section>
-      <FooterSeparator />
     </>
   );
 }

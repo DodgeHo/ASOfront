@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Home - Open PRO",
+  title: "Home - ASO",
   description: "Page description",
 };
 
@@ -12,7 +12,7 @@ import Providing from "@/components/homepage/providing";
 import WhyChoose from "@/components/homepage/why-choose";
 import Storys from "@/components/homepage/storys";
 import Partners from "@/components/homepage/partners";
-import "../css/homepage.css"
+import "@css/homepage.css";
 
 export default function Home() {
   return (

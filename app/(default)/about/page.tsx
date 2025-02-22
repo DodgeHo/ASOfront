@@ -15,7 +15,7 @@ import Partners from "@/components/homepage/partners";
 export default function About() {
   return (
     <>
-      <PageIllustration multiple />
+      <PageIllustration  />
       <Hero />
       <Timeline />
       <Team />

@@ -4,7 +4,7 @@ import Dropdown from "@/components/dropdown";
 import MobileMenu from "./mobile-menu";
 import { LiLink } from "./LinkComponents";
 import globalConfig from "@/configs/globalConfig";
-import "../../app/css/header.css";
+import "@css/header.css";
 import IconLinks from "./IconLinks";
 
 export default function Header() {

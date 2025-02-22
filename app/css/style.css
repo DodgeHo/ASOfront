@@ -43,6 +43,9 @@
   --color-blue-700: #0A77D8;
   --color-green-400: #8AE4C5;
   --color-cyan-500: #6FDCDE;/*title color 2*/
+  --color-orange-500: #DD8F1B;
+  --color-red-500: #BF434F;
+  --color-gradient-orange-to-red: linear-gradient(to bottom, var(--color-orange-500), var(--color-red-500));
   --color-gradient-green-to-blue: linear-gradient(to bottom, var(--color-green-600), var(--color-blue-700));
   --color-gradient-purple-to-blue: linear-gradient(to top, #4c51bf, #5a67d8);
   --color-gradient-green-to-cyan: linear-gradient(to bottom, var(--color-green-500), var(--color-green-400), var(--color-cyan-500));/*title color*/

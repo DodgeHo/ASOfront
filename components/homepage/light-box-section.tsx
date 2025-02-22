@@ -1,8 +1,8 @@
 import homePageConfig from "@/configs/homePageConfig";
 import Image from "next/image";
 import Coins from "@/public/images/homepage/coins.png";
-import LightBox from "@/public/images/homepage/light-box.png";
-
+import LightBox from "@/public/images/light-box.png";
+import "@css/lightbox.css"
 export default function LightBoxSection() {
   return (
     <>

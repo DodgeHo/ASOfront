@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { LiLink } from "./LinkComponents";
-import walletIcon from "@/public/images/wallet.png";
-import emailIcon from "@/public/images/email.png";
-import personaIcon from "@/public/images/persona.png";
-import walletActIcon from "@/public/images/wallet-act.png";
-import emailActIcon from "@/public/images/email-act.png";
-import personaActIcon from "@/public/images/persona-act.png";
+import walletIcon from "@/public/images/header/wallet.png";
+import emailIcon from "@/public/images/header/email.png";
+import personaIcon from "@/public/images/header/persona.png";
+import walletActIcon from "@/public/images/header/wallet-act.png";
+import emailActIcon from "@/public/images/header/email-act.png";
+import personaActIcon from "@/public/images/header/persona-act.png";
 
 const ICON_SIZE = 30;
 

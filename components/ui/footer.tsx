@@ -1,10 +1,10 @@
 import SocialLink from "./SocialLink";
 import Logo from "./logo";
 import Image from "next/image";
-import TwitterIcon from "@/public/images/twitter.svg";
-import DiscordIcon from "@/public/images/discord.svg";
-import TelegramIcon from "@/public/images/telegram.svg";
-import FooterIllustration from "@/public/images/footer-illustration.svg";
+import TwitterIcon from "@/public/images/footer/twitter.svg";
+import DiscordIcon from "@/public/images/footer/discord.svg";
+import TelegramIcon from "@/public/images/footer/telegram.svg";
+import FooterIllustration from "@/public/images/footer/footer-illustration.svg";
 import { LiLink } from "./LinkComponents";
 import globalConfig from "@/configs/globalConfig";
 

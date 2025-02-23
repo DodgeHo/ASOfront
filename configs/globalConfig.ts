@@ -1,3 +1,5 @@
+import { MenuLink } from "./MenuLink";
+
 type Config = {
   // Main Infos
   websiteTitle: string;
@@ -6,7 +8,7 @@ type Config = {
   illustrationBottomPosition: string;
 
   // Menu Links
-  menuLinks: { href: string; label: string }[];
+  menuLinks: MenuLink[];
 };
 
 const globalConfig: Config = {

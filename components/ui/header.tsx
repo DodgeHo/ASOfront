@@ -6,15 +6,17 @@ import { LiLink } from "./LinkComponents";
 import globalConfig from "@/configs/globalConfig";
 import "@css/header.css";
 import IconLinks from "./IconLinks";
-import { useRouter, NextRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function Header() {
-  const [pathname, setPathname] = useState("");
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [currentPathname, setCurrentPathname] = useState(pathname);
 
   useEffect(() => {
-    setPathname(window.location.pathname);
-  }, []);
+    setCurrentPathname(pathname);
+  }, [pathname, searchParams]);
 
   return (
     <header>

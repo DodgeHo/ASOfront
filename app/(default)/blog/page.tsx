@@ -1,6 +1,6 @@
 import { getBlogPosts } from "@/components/mdx/utils";
 import CategoryProvider from "./category-provider";
-import PageIllustration from "@/components/homepage/page-illustration";
+import GeneralPageIllustration from "@/components/general-page-illustration";
 import BlogFilters from "./filters";
 import PostItem from "@/app/(default)/blog/post-item";
 
@@ -24,7 +24,7 @@ export default function Blog() {
 
   return (
     <>
-      <PageIllustration  />
+      <GeneralPageIllustration />
       <section>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {/* Hero content */}

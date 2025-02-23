@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getBlogPosts } from "@/components/mdx/utils";
 import { notFound } from "next/navigation";
-import PageIllustration from "@/components/homepage/page-illustration";
+import GeneralPageIllustration from "@/components/general-page-illustration";
 import Image from "next/image";
 import { CustomMDX } from "@/components/mdx/mdx";
 import RelatedPosts from "./related-posts";
@@ -47,7 +47,7 @@ export default async function SinglePost(
 
   return (
     <>
-      <PageIllustration  />
+      <GeneralPageIllustration />
       <section>
         <div className="px-4 sm:px-6">
           <div className="py-12 md:py-20">

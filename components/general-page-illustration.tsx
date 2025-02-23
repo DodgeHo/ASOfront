@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Banner from "@/public/images/donation/banner.png";
+import Banner from "@/public/images/banner.png";
 import Background from "@/public/images/background.png";
-import donationPageConfig from "@/configs/donationPageConfig";
-export default function DonationPageIllustration() {
+import GlobalPageConfig from "@/configs/globalConfig";
+export default function GeneralPageIllustration() {
   return (
     <>
       <div
@@ -18,7 +18,7 @@ export default function DonationPageIllustration() {
 
       <div
         className="pointer-events-none absolute left-1/2 top-0 -z-11 w-full -translate-x-1/2 "
-        style={{ top: donationPageConfig.illustrationBottomPosition }}
+        style={{ top: GlobalPageConfig.illustrationBottomPosition }}
         aria-hidden="true"
       >
         <Image

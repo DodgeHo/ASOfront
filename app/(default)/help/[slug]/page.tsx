@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { getHelpPages } from "@/components/mdx/utils";
 import { notFound } from "next/navigation";
-import PageIllustration from "@/components/homepage/page-illustration";
+import GeneralPageIllustration from "@/components/general-page-illustration";
 import Sidebar from "./help-sidebar";
-import FooterSeparator from "@/components/footer-separator";
+import FooterSeparator from "@/components/ui/footer-separator";
 import { CustomMDX } from "@/components/mdx/mdx";
 
 export async function generateStaticParams() {
@@ -46,7 +46,7 @@ export default async function SingleHelp(
 
   return (
     <>
-      <PageIllustration  />
+      <GeneralPageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
           <div className="flex flex-col justify-between md:flex-row">

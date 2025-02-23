@@ -6,8 +6,16 @@ import { LiLink } from "./LinkComponents";
 import globalConfig from "@/configs/globalConfig";
 import "@css/header.css";
 import IconLinks from "./IconLinks";
+import { useRouter, NextRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+  const [pathname, setPathname] = useState("");
+
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, []);
+
   return (
     <header>
       <div className="header-content">
@@ -23,7 +31,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={
-                  link.label.startsWith("$")
+                  pathname.includes(link.href)
                     ? "nav-link-highlight nav-link"
                     : "nav-link-common nav-link"
                 }

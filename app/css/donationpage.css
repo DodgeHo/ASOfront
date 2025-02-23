@@ -1,0 +1,145 @@
+/* common attributes */
+:root {
+  --aso-pum-icon-size: 100px;
+}
+@media (max-width: 639px) {
+  :root {
+    --aso-pum-icon-size: 70px;
+  }
+}
+
+/* aso-pum Section */
+
+.aso-pum-container {
+  max-width: 52rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aso-pum-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+.aso-pum-icon {
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+}
+.aso-pum-label {
+  display: inline-block;
+  padding: 0.125rem 0.2rem;
+  border: 0.05rem solid var(--color-light-cyan);
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-light-cyan);
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+.aso-pum-card-table {
+  margin-bottom: 1rem;
+}
+.aso-pum-card-title {
+  color: var(--color-light-cyan);
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.5;
+  white-space: pre-line;
+  text-wrap: nowrap;
+}
+
+.aso-pum-card-content {
+  color: white;
+  font-size: 0.8rem;
+  line-height: 2;
+  white-space: pre-wrap;
+}
+
+.aso-pum-option {
+  color: var(--color-light-gray);
+  font-size: 0.7rem;
+  font-weight: 200;
+}
+
+.aso-pum-value {
+  color: var(--color-light-cyan);
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+.aso-pum-table-parameters td,
+.aso-pum-table-title td {
+  padding: 0 0.5rem 0 0; /* 调整此值以设置所需的间距 */
+}
+
+.aso-pum-table-title {
+  display: table;
+  width: auto;
+}
+.aso-pum-table-parameters {
+  display: table;
+  width: 100%;
+}
+.aso-pum-table-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.aso-pum-table-title-container {
+  flex: 0 1 auto;
+  margin-right: 1rem;
+}
+.aso-pum-table-parameters-container {
+  flex: 1 1 0;
+}
+
+.aso-pum-block-centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-cyan-500);
+  text-align: center;
+  font-size: 1.5rem;
+  white-space: pre;
+}
+.aso-pum-block-centered-title {
+  color: white;
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+@media (max-width: 640px) {
+  .aso-pum-card {
+    margin-left: 0rem;
+  }
+  .aso-pum-card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .aso-pum-card-content {
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
+  .aso-pum-option {
+    font-size: 0.5rem;
+  }
+  .aso-pum-value {
+    font-size: 0.5rem;
+  }
+  .aso-pum-table-container {
+    flex-direction: column;
+  }
+  .aso-pum-table-title {
+    display: block;
+  }
+  .aso-pum-table-parameters {
+    display: block;
+  }
+}

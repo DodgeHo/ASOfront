@@ -3,6 +3,7 @@ type Config = {
   websiteTitle: string;
 
   // Theme attributes
+  illustrationBottomPosition: string;
 
   // Menu Links
   menuLinks: { href: string; label: string }[];
@@ -20,6 +21,8 @@ const globalConfig: Config = {
   ...
   --global-theme-color-light-cyan: #9deeed;
   */
+ 
+  illustrationBottomPosition: "180px",
 
   // Menu Links 菜单及链接
   menuLinks: [

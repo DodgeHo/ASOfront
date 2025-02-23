@@ -3,13 +3,13 @@ export const metadata = {
   description: "Page description",
 };
 
-import PageIllustration from "@/components/homepage/page-illustration";
-import FooterSeparator from "@/components/footer-separator";
+import GeneralPageIllustration from "@/components/general-page-illustration";
+import FooterSeparator from "@/components/ui/footer-separator";
 
 export default function Contact() {
   return (
     <>
-      <PageIllustration  />
+      <GeneralPageIllustration />
       <section>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="py-12 md:py-20">

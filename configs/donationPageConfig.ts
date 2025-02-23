@@ -1,7 +1,7 @@
 type Config = {
-    illustrationLightPosition: string;  
-    illustrationBottomPosition: string;
-    lightBoxStats: {
+  //lightBox Section
+  illustrationLightPosition: string;
+  lightBoxStats: {
     populationInCommunity: string;
     dealAmountToday: string;
     marketValueToday: string;
@@ -11,12 +11,18 @@ type Config = {
       marketValueToday: string;
     };
   };
+  //ASO Pum section
+  ASOPumTitle: string;
+  ASOPumLabel: string;
+  ASOPumParameter: { option: string; value: string }[];
+  ASOPumDescription :string;
+  ASOPumMainFigure: string;
+  ASOPumSecondFigure: string;
 };
 
 const donationPageConfig: Config = {
-  // lightBox Stats
-  illustrationLightPosition:"150px",
-  illustrationBottomPosition:"180px",
+  // lightBox Section
+  illustrationLightPosition: "150px",
   lightBoxStats: {
     populationInCommunity: "1999",
     dealAmountToday: "1235",
@@ -27,6 +33,19 @@ const donationPageConfig: Config = {
       marketValueToday: "今日市值",
     },
   },
+  // ASO Pum section
+  ASOPumTitle: "ASO pum",
+  ASOPumLabel: "$ASO",
+  ASOPumParameter: [
+    { option: "Token Sale Type", value: "None" },
+    { option: "Fixed Price", value: "Launch Partner" },
+    { option: "Network Chain", value: "Nova Research" },
+    { option: "Ethereum", value: "Round Type" },
+    { option: "Token Vesting", value: "Public" },
+  ],
+  ASOPumDescription: "ASO is building a data-centric, modular and scalable infrastructure for agents, models and datasets, supercharging Al at scale.",
+  ASOPumMainFigure: "11.051,023 ASO",
+  ASOPumSecondFigure: " $8,203,274          +11.05%",
 };
 
 export default donationPageConfig;

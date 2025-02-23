@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Footer from "@/components/ui/footer";
 
 export default function NotFound() {
@@ -13,12 +12,7 @@ export default function NotFound() {
                   <div className="animate-gradient-text pb-8 nacelle-text24 ">
                     Uh oh. That page doesn't exist.
                   </div>
-                  <Link
-                    className="btn-sm bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%]"
-                    href="/"
-                  >
-                    Back Home
-                  </Link>
+
                 </div>
               </div>
             </div>

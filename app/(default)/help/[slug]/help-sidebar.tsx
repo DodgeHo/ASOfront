@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import "@css/help.css"
 
 export default function HelpSidebar() {
   const pathname = usePathname();
@@ -30,8 +31,8 @@ export default function HelpSidebar() {
   ];
 
   return (
-    <aside className="mb-16 md:mb-0 md:mr-10 md:w-60 md:shrink-0">
-      <nav className="relative rounded-2xl bg-linear-to-br from-gray-900/50 via-gray-800/25 to-gray-900/50 px-5 py-3 backdrop-blur-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
+    <aside className="help-sidebar ">
+      <nav className="help-sidebar-nav">
         <ul className="divide-y text-sm">
           {links.map((link, linkIndex) => (
             <li
@@ -43,13 +44,7 @@ export default function HelpSidebar() {
                 href={link.href}
               >
                 <span>{link.name}</span>
-                <svg
-                  className="ml-2 h-3 w-3 shrink-0 transform fill-current opacity-0 transition group-hover:translate-x-1 group-hover:text-indigo-600 group-hover:opacity-100"
-                  viewBox="0 0 12 12"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" />
-                </svg>
+
               </Link>
             </li>
           ))}

@@ -40,3 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Main pages in ASO Front
 HomePage:  https://dodgeho.github.io/ASOfront/
 Donation Page: https://dodgeho.github.io/ASOfront/donation
+Help Page: https://dodgeho.github.io/ASOfront/help

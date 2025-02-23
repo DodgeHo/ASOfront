@@ -24,7 +24,8 @@
 
 :root {
   --color-blue-600: #0B5FFF;
-  --color-light-blue: #29BCFF;
+  --color-light-blue: #29BCFF; 
+  --color-garyish-blue: #699FCA;
   --color-light-cyan: #CEEAEE;
   --color-indigo-500: #6366f1;
   --color-indigo-700: #4f46e5;

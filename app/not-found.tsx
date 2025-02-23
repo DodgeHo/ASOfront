@@ -1,26 +1,14 @@
 import Link from "next/link";
-import Image from "next/image";
-import NotFoundImage from "@/public/images/404.jpg";
-import GeneralPageIllustration from "@/components/general-page-illustration";
-import FooterSeparator from "@/components/ui/footer-separator";
 import Footer from "@/components/ui/footer";
 
 export default function NotFound() {
   return (
     <>
       <main className="relative flex grow flex-col">
-        <GeneralPageIllustration />
         <section>
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <div className="py-12 md:py-20">
               <div className="text-center">
-                <Image
-                  className="mx-auto rotate-2 rounded-2xl"
-                  src={NotFoundImage}
-                  width={196}
-                  height={196}
-                  alt="A funny dog with a strange expression on his face"
-                />
                 <div className="relative -mt-8">
                   <div className="animate-gradient-text pb-8 nacelle-text24 ">
                     Uh oh. That page doesn't exist.
@@ -36,7 +24,6 @@ export default function NotFound() {
             </div>
           </div>
         </section>
-        <FooterSeparator />
       </main>
       <Footer />
     </>

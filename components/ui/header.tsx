@@ -1,4 +1,6 @@
 "use client";
+import React, { Suspense, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Logo from "./logo";
 import Dropdown from "@/components/dropdown";
 import MobileMenu from "./mobile-menu";
@@ -6,17 +8,14 @@ import { LiLink } from "./LinkComponents";
 import globalConfig from "@/configs/globalConfig";
 import "@css/header.css";
 import IconLinks from "./IconLinks";
-import { useEffect, useState } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function Header() {
-  const pathname = usePathname() || '/';
-  const searchParams = useSearchParams();
+  const pathname = usePathname() || "/";
   const [currentPathname, setCurrentPathname] = useState(pathname);
 
   useEffect(() => {
     setCurrentPathname(pathname);
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return (
     <header>
@@ -48,7 +47,7 @@ export default function Header() {
                 <LiLink href="/Arabic" className="nav-link-custom">Arabic</LiLink>
               </Dropdown>
             */}
-           <IconLinks />
+            <IconLinks />
           </ul>
         </nav>
 

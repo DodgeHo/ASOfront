@@ -1,4 +1,4 @@
-import { Slide, Card } from './HomePageTypes';
+import { Slide, Card } from './typesConfig';
 
 type Config = {
   // Hero Section
@@ -39,9 +39,6 @@ type Config = {
   // Storys section
   storysTitle: string;
   storySlides: Slide[];
-  // Partners section
-  partnerTitle: string;
-  partnersImg: Card[];
 };
 
 /* 全局的主题属性包括颜色，请在文件ASOfront/app/css/style.css中的:root编辑*/
@@ -225,35 +222,7 @@ const homePageConfig: Config = {
     },
   ],
 
-  // Partners section
-  partnerTitle: "Our Partners & Backers",
-  partnersImg: [
-    {
-      imageSrcPath:  "images/homepage/partners_logo1.png",
-      title: "Partner 1",
-      content:"",
-    },
-    {
-      imageSrcPath: "/images/homepage/partners_logo2.png",
-      title: "Partner 2",
-      content:"",
-    },
-    {
-      imageSrcPath: "/images/homepage/partners_logo3.png",
-      title: "Partner 3",
-      content:"",
-    },
-    {
-      imageSrcPath: "/images/homepage/partners_logo4.png",
-      title: "Partner 4",
-      content:"",
-    },
-    {
-      imageSrcPath:"/images/homepage/partners_logo5.png",
-      title: "Partner 5",
-      content:"",
-    },
-  ],
+  
 };
 
 export default homePageConfig;

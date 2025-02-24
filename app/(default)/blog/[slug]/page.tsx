@@ -5,7 +5,6 @@ import GeneralPageIllustration from "@/components/general-page-illustration";
 import Image from "next/image";
 import { CustomMDX } from "@/components/mdx/mdx";
 import RelatedPosts from "./related-posts";
-import Partners from "@/components/homepage/partners";
 
 export async function generateStaticParams() {
   const allBlogs = getBlogPosts();
@@ -128,7 +127,6 @@ export default async function SinglePost(
           </div>
         </div>
       </section>
-      <Partners />
     </>
   );
 }

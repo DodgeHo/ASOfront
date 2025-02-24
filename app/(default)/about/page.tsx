@@ -10,7 +10,6 @@ import Team from "@/components/team";
 import Benefits from "@/components/benefits";
 import Career from "@/components/career";
 import Clients from "@/components/clients";
-import Partners from "@/components/homepage/partners";
 
 export default function About() {
   return (
@@ -22,7 +21,6 @@ export default function About() {
       <Benefits />
       <Career />
       <Clients />
-      <Partners />
     </>
   );
 }

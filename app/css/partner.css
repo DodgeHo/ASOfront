@@ -1,0 +1,66 @@
+/* partner Section */
+.partner-container {
+  --border-width: 1.5px;
+  --border-radius: 15px;
+  --border-color: var(--color-gradient-green-to-blue);
+  --left-position: 0%;
+  --top-position: 0;
+  --width-size: 100%;
+  --height-size: 100%;
+  padding: 30px;
+  gap: 1rem; /* space-x-4 equivalent */
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 840px) {
+  .partner-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.partner-container:after {
+  content: "";
+  position: absolute;
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background: var(--border-color);
+
+  mask-image: var(--mask-bg), var(--mask-bg);
+  mask-clip: content-box, padding-box;
+  mask-composite: exclude;
+  -webkit-mask-image: var(--mask-bg), var(--mask-bg);
+  -webkit-mask-clip: content-box, padding-box;
+  -webkit-mask-composite: destination-out;
+}
+
+.partner-container:before {
+  content: "";
+  position: absolute;
+  left: var(--left-position);
+  top: var(--top-position);
+  width: var(--width-size);
+  height: var(--height-size);
+  background: radial-gradient(
+    circle,
+    var(--color-super-light-blue) 0%,
+    var(--color-super-light-blue) 30%,
+    transparent 100%
+  ); /* 中心的--color-super-light-blue颜色过渡到四周完全透明的渐变 */
+
+  z-index: -1; /* 确保背景在内容后面 */
+}
+
+.partner-icon-container {
+  position: relative;
+  height: 30px;
+  width: 100%;
+}

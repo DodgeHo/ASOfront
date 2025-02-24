@@ -2,6 +2,7 @@ import donationPageConfig from "@/configs/donationPageConfig";
 import Image from "next/image";
 import LogoMedium from "@/public/images/donation/logo-medium.png";
 import ASOPumBlock from "@/public/images/donation/aso-pum-block.png";
+import Stake from "@/public/images/donation/stake.png";
 import "@/app/css/donationpage.css";
 
 export default function DonationASOPumSection() {
@@ -73,9 +74,13 @@ export default function DonationASOPumSection() {
           />
           <div className="aso-pum-block-centered-text">
             <p>{donationPageConfig.ASOPumTitle}</p>
-            <p className ="aso-pum-block-centered-title">{donationPageConfig.ASOPumMainFigure}</p>
+            <p className="aso-pum-block-centered-title">
+              {donationPageConfig.ASOPumMainFigure}
+            </p>
             <p>{donationPageConfig.ASOPumSecondFigure}</p>
           </div>
+
+          <Image className="stake-image" src={Stake} alt="Stake" />
         </div>
       </div>
     </>

@@ -5,7 +5,7 @@ import ViewImage from "@/public/images/homepage/View.png";
 import Image from "next/image";
 
 import { useEffect } from "react";
-import type { Slide } from "@/configs/HomePageTypes";
+import type { Slide } from "@/configs/typesConfig";
 
 interface StoryCardsProps {
   slides: Slide[];

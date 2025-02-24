@@ -75,7 +75,7 @@
 }
 
 .nav-link:hover {
-  color: var(--color-indigo-500);
+  color: var(--color-light-blue);
 }
 
 .nav-link-custom {
@@ -88,6 +88,13 @@
   font-size: 0.875rem; /* text-sm */
   color: white; /* text-white */
   transition: color 0.2s;
+}
+.nav-link-logo{
+  display: inline-flex;
+  flex-shrink: 0;
+}
+.nav-link-logo:hover{
+  filter: drop-shadow(0 0 5px white);
 }
 
 .nav-link-custom:hover {
@@ -103,6 +110,10 @@
 
 .nav-link-highlight {
   color: var(--color-green-500);
+}
+.nav-link-highlight:hover {
+  color: var(--color-green-500);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
 .nav-link-common {

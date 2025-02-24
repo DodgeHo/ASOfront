@@ -11,7 +11,7 @@ import SaleModels from "@/components/homepage/sale-models";
 import Providing from "@/components/homepage/providing";
 import WhyChoose from "@/components/homepage/why-choose";
 import Storys from "@/components/homepage/storys";
-import Partners from "@/components/homepage/partners";
+import PartnerComp from "@/components/partner-comp";
 import "@css/homepage.css";
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
       <Providing />
       <WhyChoose />
       <Storys />
-      <Partners />
+      <PartnerComp />
     </>
   );
 }

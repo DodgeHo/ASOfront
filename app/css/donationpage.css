@@ -14,7 +14,7 @@
   max-width: 52rem;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +99,6 @@
 .aso-pum-table-parameters-container {
   flex: 1 1 0;
 }
-
 .aso-pum-block-centered-text {
   position: absolute;
   top: 50%;
@@ -109,12 +108,21 @@
   text-align: center;
   font-size: 1.5rem;
   white-space: pre;
+  padding-bottom: 1rem;
 }
 .aso-pum-block-centered-title {
   color: white;
   font-size: 2.75rem;
   font-weight: 700;
 }
+.stake-image {
+  position: absolute;
+  width:50%;
+  bottom: -7.5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (max-width: 640px) {
   .aso-pum-card {
     margin-left: 0rem;
@@ -141,5 +149,23 @@
   }
   .aso-pum-table-parameters {
     display: block;
+  }
+  .aso-pum-block-centered-text {
+    font-size: 1.0rem;
+    padding-bottom: 0.5rem;
+  }
+  .aso-pum-block-centered-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+@media (max-width: 375px) {
+  .aso-pum-block-centered-text {
+    font-size: 0.6rem;
+    padding-bottom: 0.5rem;
+  }
+  .aso-pum-block-centered-title {
+    font-size: 1rem;
+    font-weight: 700;
   }
 }

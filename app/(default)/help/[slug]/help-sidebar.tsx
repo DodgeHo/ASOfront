@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import "@css/help.css"
+import "@css/sidebar.css"
 
 export default function HelpSidebar() {
   const pathname = usePathname();
@@ -39,8 +39,8 @@ export default function HelpSidebar() {
               key={linkIndex}
               className="py-2 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1]"
             >
-              <Link
-                className={`group flex items-center transition ${pathname === link.href ? "text-indigo-500" : "text-indigo-200/65 hover:text-indigo-500"}`}
+                <Link
+                className={`group flex items-center transition ${pathname === link.href ? "text-green-400" : "text-black hover:text-green-400"}`}
                 href={link.href}
               >
                 <span>{link.name}</span>

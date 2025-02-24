@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function Header() {
-  const pathname = usePathname();
+  const pathname = usePathname() || '/';
   const searchParams = useSearchParams();
   const [currentPathname, setCurrentPathname] = useState(pathname);
 
@@ -25,7 +25,7 @@ export default function Header() {
         <nav className="hidden md:flex md:grow flex flex-1 items-center">
           {/* Desktop menu links */}
           <ul className="nav-links">
-            <div className=" ">
+            <div className="nav-link-logo">
               <Logo />
             </div>
             {globalConfig.menuLinks.map((link) => (
@@ -33,9 +33,9 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={
-                  pathname.includes(link.href)
-                    ? "nav-link-highlight nav-link"
-                    : "nav-link-common nav-link"
+                  currentPathname.includes(link.href)
+                    ? "nav-link nav-link-highlight"
+                    : "nav-link nav-link-common "
                 }
               >
                 {link.label}

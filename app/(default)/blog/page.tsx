@@ -9,7 +9,6 @@ export const metadata = {
   description: "Page description",
 };
 
-import Partners from "@/components/homepage/partners";
 import Pagination from "./pagination";
 
 export default function Blog() {
@@ -60,7 +59,6 @@ export default function Blog() {
           </div>
         </div>
       </section>
-      <Partners />
     </>
   );
 }

@@ -6,18 +6,17 @@ export const metadata = {
 import GeneralPageIllustration from "@/components/general-page-illustration";
 import DonationLightBoxSection from "@/components/donation/donation-light-box-section";
 import DonationASOPumSection from "@components/donation/donation-aso-pum-section";
+import DonationBlog from "@/components/donation/donationBlog";
 import "@css/donationpage.css";
 import Image from "next/image";
-import Hero from "@/components/homepage/hero-home";
-import FooterSeparator from "@/components/ui/footer-separator";
 
-export default function Newsletter() {
+export default function Donation() {
   return (
     <>
       <GeneralPageIllustration />
       <DonationLightBoxSection />
       <DonationASOPumSection />
-
+      <DonationBlog />
 
     </>
   );

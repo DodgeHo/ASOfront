@@ -169,3 +169,22 @@
     font-weight: 700;
   }
 }
+
+/* Donation section */
+.donation-blog-tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.donation-blog-tabs button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.donation-blog-tabs button.active {
+  background-color: #0070f3;
+  color: white;
+}

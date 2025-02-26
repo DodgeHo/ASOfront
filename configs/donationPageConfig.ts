@@ -15,9 +15,14 @@ type Config = {
   ASOPumTitle: string;
   ASOPumLabel: string;
   ASOPumParameter: { option: string; value: string }[];
-  ASOPumDescription :string;
+  ASOPumDescription: string;
   ASOPumMainFigure: string;
   ASOPumSecondFigure: string;
+  // Blog sections
+  blogSections: {
+    label: string;
+    filePath: string;
+  }[];
 };
 
 const donationPageConfig: Config = {
@@ -43,9 +48,17 @@ const donationPageConfig: Config = {
     { option: "Ethereum", value: "Round Type" },
     { option: "Token Vesting", value: "Public" },
   ],
-  ASOPumDescription: "ASO is building a data-centric, modular and scalable infrastructure for agents, models and datasets, supercharging Al at scale.",
+  ASOPumDescription:
+    "ASO is building a data-centric, modular and scalable infrastructure for agents, models and datasets, supercharging Al at scale.",
   ASOPumMainFigure: "11.051,023 ASO",
   ASOPumSecondFigure: " $8,203,274          +11.05%",
+  // Blog sections
+  blogSections: [
+    { label: "About", filePath: "/content/donation/about.mdx" },
+    { label: "Transparency", filePath: "/content/donation/transparency.mdx" },
+    { label: "Sale Trades", filePath: "/content/donation/sale-trades.mdx" },
+    { label: "Sale Info", filePath: "/content/donation/sale-info.mdx" },
+  ],
 };
 
 export default donationPageConfig;

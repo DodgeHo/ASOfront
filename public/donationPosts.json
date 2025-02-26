@@ -1,0 +1,38 @@
+[
+  {
+    "metadata": {
+      "title": "About",
+      "updatedAt": "2024-01-19",
+      "summary": "N/A"
+    },
+    "slug": "about",
+    "content": "ASO pum: The First Verifiable and Trustless Al Network\n\nASO pum is building a data-centric, modular, and scalable blockchain infrastructure for agents, models, and datasets, supercharging Al at scale.\n\n- Whitelist Sale (Round 2) Starts on Dec 13, 2024\n- ASO pum: The First Verifiable and Trustless Al NetworkOpen to $GLs and $FJO Communities Only\n\n<Image\n  alt=\"News inner1\"\n  src={`/images/donation/ASO-pum-about-img1.png`}\n  width={768}\n  height={432}\n  caption=\"Photo by Helena Lopes on Unsplash\"\n/>\n<Image\n  alt=\"News inner2\"\n  src={`/images/donation/ASO-pum-about-img2.png`}\n  width={768}\n  height={432}\n\n/>\n\n## Highlights\n\nASO trusted technologies drive 10B+ data queries and 25,000 verifier nodes, backed by leading partners and investors.\n- ASO Network has secured $8 million in funding at $100 million valuation from Kucoin Ventures, Foresight Ventures, UOB Venture, Laser Digital, Signum Capital, Gate Labs, etc.\n- 10 bilion queries, 10.8 million on-chain CRUD txs, 2 million Al chats, 760k addresses created.\n- More than 25,000 Verifier Nodes running on Glacier Network.\n- Integrated with Base, Solana, Sui Network, Arbitrum, BNB Chain, Filecoin, Arweave.\n- AsO pum Al: Launched the 1st Decentralized VectorDB for Al integrated into LangChain; LLMs Benchmark Glacier Chatbot-Bench.\n- ASO DB: Database deployed on Arweave, BNB Greenfield, and Filecoin.\n- ASO DA: Building the modular Data Availability layer for DePiN and Al\n- Proprietary Tech: Decentralized Datalayer & Database, Privacy-Preserving, LLM, FHE, MPC, TEE.\n- 80,000 NFTs minted on X Layer powered by OKX and Binance Wallet\n- Storage data has ranked 1st on BNB Greenfield, featured in BNB Chain GitHub & GitBook.\n- Highlighted in BNB Chain Top Al landscape, Babylon Ecosystem, and The Block.\n- Featured in Messari: Decentralized Databases-The Missing Piece of Web3.\n\n\n<Image\n  alt=\"News inner3\"\n  src={`/images/donation/ASO-pum-about-img3.png`}\n  width={768}\n  height={432}\n  caption=\"Photo by Helena Lopes on Unsplash\"\n/>\n<Image\n  alt=\"News inner4\"\n  src={`/images/donation/ASO-pum-about-img4.png`}\n  width={768}\n  height={432}\n\n/>"
+  },
+  {
+    "metadata": {
+      "title": "Sale info",
+      "updatedAt": "2024-01-19",
+      "summary": "N/A"
+    },
+    "slug": "sale-info",
+    "content": "Sale info"
+  },
+  {
+    "metadata": {
+      "title": "sale trades",
+      "updatedAt": "2024-01-19",
+      "summary": "N/A"
+    },
+    "slug": "sale-trades",
+    "content": "sale trades"
+  },
+  {
+    "metadata": {
+      "title": "transparency",
+      "updatedAt": "2024-01-19",
+      "summary": "N/A"
+    },
+    "slug": "transparency",
+    "content": "transparency"
+  }
+]

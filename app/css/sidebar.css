@@ -14,7 +14,7 @@
 .help-sidebar-nav {
   position: relative;
   border-radius: 0.5rem;
-  background: var(--color-garyish-blue);
+  background: var(--color-dark-grayish-blue);
   padding: 1.25rem;
   backdrop-filter: blur(2px);
 }
@@ -57,4 +57,71 @@
   transform: translateX(0.25rem);
   color: #4f46e5;
   opacity: 1;
+}
+
+.donation-sidebar {
+  margin-bottom: 4rem;
+}
+
+.donation-sidebar-nav {
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: var(--color-darker-navy);
+
+  backdrop-filter: blur(2px);
+  border: 1px solid var(--color-dark-grayish-blue);
+
+}
+.donation-sidebar-nav-content {
+  padding: 1.25rem;
+}
+.donation-sidebar-border{
+  border-top: 1px solid var(--color-dark-grayish-blue);
+}
+
+.donation-sidebar-nav-title {
+  font-size: 1rem;
+  color:var(--color-light-cyan);
+}
+
+.donation-sidebar-nav-text-main {
+  font-size: 0.6rem;
+  color:var(--color-light-cyan);
+  text-align: right;
+}
+
+.donation-sidebar-nav-text-second {
+  font-size: 0.6rem;
+  color:var(--color-light-cyan-2);
+
+}
+.donation-sidebar-nav-text-block-link {
+
+  font-size: 0.6rem;
+  color: var(--color-light-cyan);
+  border: 1px solid var(--color-light-cyan);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  width: 100%; /* 设置为 100% */
+  margin: 0.5rem 0;
+  text-align: left;
+}
+.donation-sidebar-nav-text-block-link:hover {
+  background-color: var(--color-light-cyan);
+  color: black;
+}
+
+.donation-sidebar-nav-text-block-link a{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+@media (min-width: 768px) {
+  .donation-sidebar {
+    margin-bottom: 0;
+    width: 15rem;
+    flex-shrink: 0;
+  }
 }

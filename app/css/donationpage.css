@@ -1,15 +1,16 @@
 /* common attributes */
 :root {
   --aso-pum-icon-size: 100px;
+  --aso-donation-blog-author-icon-size: 70px;
 }
 @media (max-width: 639px) {
   :root {
     --aso-pum-icon-size: 70px;
+    --aso-donation-blog-author-icon-size: 45px;
   }
 }
 
 /* aso-pum Section */
-
 .aso-pum-container {
   max-width: 52rem;
   width: 100%;
@@ -117,7 +118,7 @@
 }
 .stake-image {
   position: absolute;
-  width:50%;
+  width: 50%;
   bottom: -7.5%;
   left: 50%;
   transform: translateX(-50%);
@@ -151,7 +152,7 @@
     display: block;
   }
   .aso-pum-block-centered-text {
-    font-size: 1.0rem;
+    font-size: 1rem;
     padding-bottom: 0.5rem;
   }
   .aso-pum-block-centered-title {
@@ -173,18 +174,114 @@
 /* Donation section */
 .donation-blog-tabs {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  justify-content: center; /* 添加此行 */
+  width: 100%;
 }
 
 .donation-blog-tabs button {
-  padding: 10px 20px;
+  flex: 1;
+  text-align: center;
   border: none;
-  background-color: #f0f0f0;
+  padding: 2px;
+  background-color: var(--color-darker-navy);
+  color: var(--color-dark-grayish-blue);
   cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .donation-blog-tabs button.active {
-  background-color: #0070f3;
+  color: var(--color-cyan-500);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-cyan-500);
+}
+.donation-blog-container {
+  margin: 0;
+}
+.donation-blog-header {
+  max-width: 52rem;
+  width: 100%;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donation-blog-content {
+  padding-left: 4px;
   color: white;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  gap: 1rem;
+  display: grid;
+  text-align: left;
+  padding-right: 0.75rem;
+}
+.donation-blog-social-link {
+  display: flex;
+  gap: 1rem; /* 调整间距 */
+  align-items: center; /* 添加此行以使内部元素竖直居中对齐 */
+  justify-content: flex-end; /* 添加此行以使其在上一层靠右居中对齐 */
+  flex: 1; /* 添加此行以使其占据剩余空间 */
+  padding-right: 0.75rem;
+}
+
+.donation-blog-author-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* 添加此行以使内部元素竖直居中对齐 */
+  padding-left: 0.75rem;
+}
+.donation-blog-author-name {
+  color: var(--color-light-cyan);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.5;
+  white-space: pre-line;
+  text-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.donation-blog-author-label {
+  display: inline-block;
+  padding: 0rem 0.1rem;
+  border: 0.05rem solid var(--color-light-cyan);
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--color-light-cyan);
+  width: fit-content;
+}
+
+
+@media (max-width: 640px) {
+  .donation-blog-tabs button {
+    padding: 1px;
+    font-weight: 400;
+    font-size: 0.6rem;
+  }
+  
+  .donation-blog-tabs button.active {
+    font-weight: 400;
+    border-bottom: 2px solid var(--color-cyan-500);
+  }
+  .donation-blog-author-name  {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+  }
+  .donation-blog-author-label {
+    padding: 0rem 0.1rem;
+    border: 0.05rem solid var(--color-light-cyan);
+    border-radius: 0.5rem;
+    font-size: 0.5rem;
+    font-weight: 300;
+  }
+  .donation-blog-container {
+    margin: 0 1rem;
+  }
 }

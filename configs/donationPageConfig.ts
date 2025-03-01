@@ -1,3 +1,5 @@
+import blogSectionTitle from './blogSectionTitles';
+
 type Config = {
   //lightBox Section
   illustrationLightPosition: string;
@@ -19,10 +21,7 @@ type Config = {
   ASOPumMainFigure: string;
   ASOPumSecondFigure: string;
   // Blog sections
-  blogSections: {
-    label: string;
-    filePath: string;
-  }[];
+  blogSectionTitle: string[];
 };
 
 const donationPageConfig: Config = {
@@ -53,12 +52,7 @@ const donationPageConfig: Config = {
   ASOPumMainFigure: "11.051,023 ASO",
   ASOPumSecondFigure: " $8,203,274          +11.05%",
   // Blog sections
-  blogSections: [
-    { label: "About", filePath: "/content/donation/about.mdx" },
-    { label: "Transparency", filePath: "/content/donation/transparency.mdx" },
-    { label: "Sale Trades", filePath: "/content/donation/sale-trades.mdx" },
-    { label: "Sale Info", filePath: "/content/donation/sale-info.mdx" },
-  ],
+  blogSectionTitle,
 };
 
 export default donationPageConfig;

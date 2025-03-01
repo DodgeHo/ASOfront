@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import blogSectionTitle from "../configs/blogSectionTitles.js";
 
 /**
  * @typedef {Object} Metadata
@@ -42,7 +43,7 @@ function parseFrontmatter(fileContent) {
  * @returns {string[]}
  */
 function getMDXFiles(dir) {
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
+  return fs.readdirSync(dir).filter((file) => (path.extname(file) === ".mdx" || path.extname(file) === ".md"));
 }
 
 /**
@@ -60,7 +61,7 @@ function readMDXFile(filePath) {
  */
 function getMDXData(dir) {
   const mdxFiles = getMDXFiles(dir);
-  return mdxFiles.map((file) => {
+  const mdxData = mdxFiles.map((file) => {
     const { metadata, content } = readMDXFile(path.join(dir, file));
     const slug = path.basename(file, path.extname(file));
     return {
@@ -69,6 +70,23 @@ function getMDXData(dir) {
       content,
     };
   });
+
+  // 根据 blogSectionTitle 排序
+  const sortedMdxData = [];
+  blogSectionTitle.forEach((title) => {
+    const post = mdxData.find((data) => data.slug === title);
+    if (post) {
+      sortedMdxData.push(post);
+    }
+  });
+
+  // 将剩余的未排序的文章添加到末尾
+  const remainingMdxData = mdxData.filter(
+    (data) => !blogSectionTitle.includes(data.slug)
+  );
+  sortedMdxData.push(...remainingMdxData);
+
+  return sortedMdxData;
 }
 
 export default function getDonationPosts() {

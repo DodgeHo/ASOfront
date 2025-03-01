@@ -1,8 +1,8 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* Additional styles */
-@import './additional-styles/utility-patterns.css' layer(components);
-@import './additional-styles/theme.css';
+@import "./additional-styles/utility-patterns.css" layer(components);
+@import "./additional-styles/theme.css";
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -23,10 +23,11 @@
 }
 
 :root {
-  --color-blue-600: #0B5FFF;
-  --color-light-blue: #29BCFF; 
-  --color-garyish-blue: #699FCA;
-  --color-light-cyan: #CEEAEE;
+  --color-blue-600: #0b5fff;
+  --color-light-blue: #29bcff;
+  --color-dark-grayish-blue: #5a6b8c;
+  --color-light-cyan: #ceeaee;
+  --color-light-cyan-2: #9ecaea;
   --color-indigo-500: #6366f1;
   --color-indigo-700: #4f46e5;
   --color-indigo-200-65: #818cf8a6;
@@ -35,23 +36,44 @@
   --color-blue-500: #3b83f6d6;
   --color-super-light-blue: #0044ff33;
   --color-gray-700: #4b5563;
-  --color-green-500: #B3F37A;/*title color 1*/
+  --color-green-500: #b3f37a; /*title color 1*/
   --color-mid-gray: #122a4618;
   --color-light-gray: #beb9bf;
   --color-bg-navy: #102230; /*background color*/
-  --color-dark-navy: #062E4B;
-  --color-green-600: #05BE9D;
-  --color-blue-700: #0A77D8;
-  --color-green-400: #8AE4C5;
-  --color-cyan-500: #6FDCDE;/*title color 2*/
-  --color-orange-500: #DD8F1B;
-  --color-red-500: #BF434F;
-  --color-gradient-orange-to-red: linear-gradient(to bottom, var(--color-orange-500), var(--color-red-500));
-  --color-gradient-green-to-blue: linear-gradient(to bottom, var(--color-green-600), var(--color-blue-700));
+  --color-dark-navy: #062e4b;
+  --color-darker-navy: #0a1a37;
+  --color-green-600: #05be9d;
+  --color-blue-700: #0a77d8;
+  --color-green-400: #8ae4c5;
+  --color-cyan-500: #6fdcde; /*title color 2*/
+  --color-orange-500: #dd8f1b;
+  --color-red-500: #bf434f;
+  --color-gradient-orange-to-red: linear-gradient(
+    to bottom,
+    var(--color-orange-500),
+    var(--color-red-500)
+  );
+  --color-gradient-green-to-blue: linear-gradient(
+    to bottom,
+    var(--color-green-600),
+    var(--color-blue-700)
+  );
   --color-gradient-purple-to-blue: linear-gradient(to top, #4c51bf, #5a67d8);
-  --color-gradient-green-to-cyan: linear-gradient(to bottom, var(--color-green-500), var(--color-green-400), var(--color-cyan-500));/*title color*/
-  --color-gradient-blue-to-light-blue: linear-gradient(to bottom, var(--color-blue-600), var(--color-light-blue));
-  --mask-bg: linear-gradient(red, red); /*使用红色过滤，蓝色和绿色都将不可见，因此显现为透明 */
+  --color-gradient-green-to-cyan: linear-gradient(
+    to bottom,
+    var(--color-green-500),
+    var(--color-green-400),
+    var(--color-cyan-500)
+  ); /*title color*/
+  --color-gradient-blue-to-light-blue: linear-gradient(
+    to bottom,
+    var(--color-blue-600),
+    var(--color-light-blue)
+  );
+  --mask-bg: linear-gradient(
+    red,
+    red
+  ); /*使用红色过滤，蓝色和绿色都将不可见，因此显现为透明 */
   --mask-clip: content-box, padding-box;
   --animate-gradient: gradient 6s linear infinite;
 }
@@ -88,11 +110,20 @@
   z-index: -10;
 }
 
-
-.animate-gradient-text  {
+.animate-gradient-text {
   font-size: var(--text-xl);
   animation: var(--animate-gradient);
   background: var(--color-gradient-blue-to-light-blue);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.animate-white-text {
+  font-size: var(--text-xl);
+  animation: var(--animate-gradient);
+  background: white;
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -136,25 +167,23 @@
   }
 }
 
-
 .text-link {
-  color: var(--color-indigo-200-65); 
+  color: var(--color-indigo-200-65);
   transition: color 0.2s;
 }
 
 .text-link:hover {
-  color: var(--color-indigo-500); 
+  color: var(--color-indigo-500);
 }
 
 .social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-indigo-500); 
+  color: var(--color-indigo-500);
   transition: color 0.2s;
 }
 
 .social-icon:hover {
   color: var(--color-indigo-400);
 }
-

@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-type Metadata = {
+export type Metadata = {
   title: string;
   summary?: string;
   publishedAt: string;
@@ -62,6 +62,3 @@ export function getHelpPages() {
   return getMDXData(path.join(process.cwd(), "content/help"));
 }
 
-export function getDonationPosts() {
-  return getMDXData(path.join(process.cwd(), "content/donation"));
-}

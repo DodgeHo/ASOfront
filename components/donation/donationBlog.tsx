@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import DonationSidebar from "./donation-sidebar";
 import ReactMarkdown from "react-markdown";
-import { Metadata } from "@/components/mdx/utils";
+//import { Metadata } from "@/components/mdx/utils";
 import Image from "next/image";
 import donationPageConfig from "@/configs/donationPageConfig";
 import LogoMedium from "@/public/images/donation/logo-medium.png";
@@ -11,8 +11,16 @@ import SocialLink from "@/components/ui/SocialLink";
 import TwitterIcon from "@/public/images/footer/twitter.svg";
 import DiscordIcon from "@/public/images/footer/discord.svg";
 import TelegramIcon from "@/public/images/footer/telegram.svg";
+import donationPosts from "@/public/donationPosts.json"; // 导入 JSON 文件
+
+type Metadata = {
+  title: string;
+  summary?: string;
+};
+
 interface Post {
   metadata: Metadata;
+  slug:string;
   content: string;
 }
 
@@ -22,21 +30,14 @@ export default function DonationBlog() {
   const [mdxPost, setMdxPost] = useState<Post | null>(null);
 
   useEffect(() => {
-    async function fetchPosts() {
-      const response = await fetch("/donationPosts.json");
-      if (!response.ok) {
-        console.error("Failed to fetch donation posts:", response.statusText);
-        return;
-      }
-      const donationPosts: Post[] = await response.json();
-      console.log("Fetched donation posts:", donationPosts); // 添加日志
-      setAllPosts(donationPosts);
-      if (donationPosts.length > 0) {
-        setActiveTab(donationPosts[0].metadata.title);
-        setMdxPost(donationPosts[0]);
-      }
+    // 使用导入的 JSON 数据
+    const fetchedPosts: Post[] = donationPosts;
+    console.log("Fetched donation posts:", fetchedPosts); // 添加日志
+    setAllPosts(fetchedPosts);
+    if (fetchedPosts.length > 0) {
+      setActiveTab(fetchedPosts[0].metadata.title);
+      setMdxPost(fetchedPosts[0]);
     }
-    fetchPosts();
   }, []);
 
   const handleTabClick = (label: string) => {

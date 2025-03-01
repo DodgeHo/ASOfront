@@ -44,6 +44,8 @@ jobs:
         with:
           node-version: "23.6.1"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Generate donationPosts.json
+        run: npm run generate:donationPosts
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:

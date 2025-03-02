@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: process.env.BASEPATH,
+  trailingSlash: false,
   redirects: async () => {
     return [    ]
   },

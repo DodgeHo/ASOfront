@@ -1,14 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: process.env.BASEPATH,
-  trailingSlash: false,
+  basePath: process.env.BASEPATH || '',
+  trailingSlash: true,
   redirects: async () => {
-    return [    ]
+    return [];
   },
   images: {
     unoptimized: true,
   }
-}
+};
 
-export default nextConfig
+export default nextConfig;

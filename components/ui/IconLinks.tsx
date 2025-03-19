@@ -12,7 +12,7 @@ const ICON_SIZE = 30;
 export default function IconLinks() {
   return (
     <div className="flex space-x-2 ml-auto">
-      <LiLink href="/Wallet" className="icon-link">
+      <LiLink href="/wallet" className="icon-link">
         <Image src={walletIcon} alt="Wallet" width={ICON_SIZE} height={ICON_SIZE} className="default-icon" />
         <Image src={walletActIcon} alt="Wallet Active" width={ICON_SIZE} height={ICON_SIZE} className="active-icon" />
       </LiLink>
